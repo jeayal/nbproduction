@@ -9,16 +9,19 @@ export default function CardRow({
   imgSrc,
   imgAlt,
   rowInverse,
+  bgColor,
 }: any) {
   if (rowInverse) {
     return (
-      <div className='layout ${bgColor} relative flex flex-col overflow-hidden rounded-xl drop-shadow-xl transition ease-in-out sm:flex-col sm:gap-5 md:flex-row'>
-        <div className='flex flex-col justify-between md:w-2/3'>
-          <div className='p-6 text-left '>
-            <h1 className='text-l mb-2'>{title}</h1>
-            <p>{innerText}</p>
+      <div
+        className={`layout relative flex flex-col overflow-hidden rounded-xl ${bgColor} drop-shadow-xl transition ease-in-out sm:flex-col sm:gap-5 md:flex-row `}
+      >
+        <div id='txt' className='flex flex-col justify-evenly p-10 md:w-2/3'>
+          <div className='flex flex-col justify-between text-left'>
+            <h1 className='text-l mb-6'>{title}</h1>
+            <p className='mb-6'>{innerText}</p>
           </div>
-          <div className='mb-6 flex flex-col gap-4 p-6 text-center md:flex-row '>
+          <div className='flex flex-col gap-4 text-center md:flex-row'>
             <ButtonLink
               className='justify-center px-10 uppercase'
               href='/components'
@@ -35,7 +38,7 @@ export default function CardRow({
             </ButtonLink>
           </div>
         </div>
-        <div className='flex md:w-1/3'>
+        <div id='img' className='flex md:w-1/3'>
           <Image
             src={imgSrc}
             width={750}
@@ -48,11 +51,13 @@ export default function CardRow({
     );
   } else {
     return (
-      <div className='layout relative flex flex-col overflow-hidden rounded-xl bg-white drop-shadow-xl transition ease-in-out sm:flex-col sm:gap-5 md:flex-row-reverse'>
-        <div className='flex flex-col justify-between md:w-2/3'>
-          <div className='p-6 text-left '>
-            <h1 className='text-l mb-2'>{title}</h1>
-            <p>{innerText}</p>
+      <div
+        className={`layout relative flex flex-col overflow-hidden rounded-xl ${bgColor} drop-shadow-xl transition ease-in-out sm:flex-col sm:gap-5 md:flex-row-reverse `}
+      >
+        <div id='txt' className='flex flex-col justify-evenly p-10 md:w-2/3'>
+          <div className='flex flex-col justify-between text-left'>
+            <h1 className='text-l mb-6'>{title}</h1>
+            <p className='mb-6'>{innerText}</p>
           </div>
           <div className='mb-6 flex flex-col gap-4 p-6 text-center md:flex-row '>
             <ButtonLink

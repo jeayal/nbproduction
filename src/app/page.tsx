@@ -1,11 +1,11 @@
 'use client';
 
-import Image from 'next/image';
 import * as React from 'react';
+import ScrollToTop from 'react-scroll-to-top';
 
-import ButtonLink from '@/components/links/ButtonLink';
-
+import BlockHomepage from '@/app/components/block';
 import CardRow from '@/app/components/card';
+import VimeoVideos from '@/app/components/vimeoportfolio';
 
 import LabTabs from './components/tabs';
 
@@ -50,51 +50,24 @@ export default function HomePage() {
           Votre navigateur ne supporte pas l'utilisation de vidéo ici.
         </video>
       </header>
-      <section className='bg-white'>
-        <div className='layout relative flex min-h-screen flex-col justify-center py-12 '>
+      <section>
+        <div className='layout relative flex min-h-screen w-full flex-col justify-center py-12'>
           <h1 className='mb-10 text-6xl'>Join the club.</h1>
-          <div
-            className=' flex flex-row overflow-hidden rounded-lg bg-slate-100
-          sm:flex-col md:flex-row lg:flex-row'
-          >
-            <div className='flex flex-col'>
-              <p className='m-0 justify-center p-8 pr-32 text-left'>
-                La vidéo est l’un des moyens les plus efficaces pour
-                communiquer. Elle donne une image sérieuse et met en avant votre
-                entreprise pour vos clients actuels et futurs.
-              </p>
-              <p className='m-0 justify-center p-8 pr-32 text-left'>
-                C'est également un excellent moyen pour garder un souvenir de
-                vos événements marquants. Je vous propose donc de créer des
-                vidéos qui correspondront à vos envies et vos besoins.
-              </p>
-              <div className='flex content-center justify-center gap-6'>
-                <ButtonLink
-                  className='mt-6 px-10 uppercase'
-                  href='/components'
-                  variant='outline'
-                >
-                  Contactez-moi
-                </ButtonLink>
-                <ButtonLink
-                  className='mt-6 px-10 uppercase'
-                  href='/components'
-                  variant='primary'
-                >
-                  Faire un devis
-                </ButtonLink>
-              </div>
-            </div>
-            <Image
-              src='/images/nicolas-blanc-production.jpg'
-              width={900}
-              height={900}
-              alt='Picture of the author'
-              className='object-cover'
-            />
-          </div>
+          <CardRow
+            rowInverse={true}
+            bgColor='bg-slate-100 dark:bg-neutral-800'
+            title='Bonjour'
+            imgSrc='/images/nicolas-blanc-production.jpg'
+            imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
+            innerText='La vidéo est l’un des moyens les plus efficaces pour
+          communiquer. Elle donne une image sérieuse et met en avant votre
+          entreprise pour vos clients actuels et futurs.
+          Cest également un excellent moyen pour garder un souvenir de
+          vos événements marquants. Je vous propose donc de créer des
+          vidéos qui correspondront à vos envies et vos besoins.'
+          />
         </div>
-        <div className='my-20 w-full bg-slate-100 py-20'>
+        <div className='my-20 w-full bg-slate-100 py-20 dark:bg-neutral-900'>
           <h1 className='mb-10 items-center justify-center text-center text-6xl'>
             Une
             <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>
@@ -109,20 +82,17 @@ export default function HomePage() {
 
           {/* END OF TABS */}
         </div>
-        <CardRow
-          rowInverse={true}
-          bgColor='bg-slate-100'
-          title='Bonjour'
-          imgSrc='/images/nicolas-blanc-production.jpg'
-          imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
-          innerText='La vidéo est l’un des moyens les plus efficaces pour
-          communiquer. Elle donne une image sérieuse et met en avant votre
-          entreprise pour vos clients actuels et futurs.
-          Cest également un excellent moyen pour garder un souvenir de
-          vos événements marquants. Je vous propose donc de créer des
-          vidéos qui correspondront à vos envies et vos besoins.'
+      </section>
+      <section id='vimeo-portfolio' className='flex w-full flex-col'>
+        <BlockHomepage
+          isBig={true}
+          bgColor='bg-white'
+          title='Mes dernières vidéos'
+          subTitle='Découvrez mon travail à travers quelques vidéos que j ai pu réaliser'
+          innerComponent={<VimeoVideos />}
         />
       </section>
+      <ScrollToTop smooth />
     </main>
   );
 }

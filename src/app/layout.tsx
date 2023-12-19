@@ -6,6 +6,8 @@ import '@/styles/globals.css';
 import '@/styles/colors.css';
 
 import NavBar from '@/app/components/navbar';
+import Provider from '@/app/components/provider';
+import ThemeSwitcher from '@/app/components/themeSwitcher';
 import { siteConfig } from '@/constant/config';
 
 // !STARTERCONF Change these default meta
@@ -58,8 +60,13 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <NavBar />
-        {children}
+        <Provider>
+          <div className='fixed bottom-10 right-10 z-50  h-10 w-10 rounded-full bg-neutral-950 p-8 drop-shadow-xl dark:bg-gray-200'>
+            <ThemeSwitcher />
+          </div>
+          <NavBar />
+          {children}
+        </Provider>
       </body>
     </html>
   );
