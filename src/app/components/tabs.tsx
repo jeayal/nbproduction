@@ -21,7 +21,7 @@ export default function LabTabs() {
       <TabContext value={value}>
         <Box>
           <div className='align-middl my-2 flex flex-row flex-wrap items-center justify-center'>
-            <TabList onChange={handleChange} fullWidth={true}>
+            <TabList onChange={handleChange}>
               <Tab label={categories[0]} value='1' />
               <Tab label={categories[1]} value='2' />
               <Tab label={categories[2]} value='3' />
