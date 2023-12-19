@@ -7,7 +7,8 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 const viewCount = 3;
 
 const VimeoVideos = () => {
-  const [videos, setVideos] = useState([]);
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  const [videos, setVideos] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchVideos = async () => {

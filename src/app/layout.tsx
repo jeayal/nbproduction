@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import * as React from 'react';
 
 import '@/styles/globals.css';
-// !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
-import '@/styles/colors.css';
 
 import NavBar from '@/app/components/navbar';
 import Provider from '@/app/components/provider';
@@ -65,7 +63,7 @@ export default function RootLayout({
             <ThemeSwitcher />
           </div>
           <NavBar />
-          {children}
+          <main className='flex w-full flex-1 flex-col  '>{children}</main>
         </Provider>
       </body>
     </html>
