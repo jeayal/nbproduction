@@ -13,5 +13,13 @@
     "classNames",
     "containerClassName"
   ],
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
   "typescript.preferences.importModuleSpecifier": "non-relative"
 }

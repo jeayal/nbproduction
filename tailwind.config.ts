@@ -50,6 +50,9 @@ export default {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
       },
+      borderRadius: {
+        large: '3rem',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
