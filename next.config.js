@@ -5,6 +5,10 @@ const nextConfig = {
   },
 
   reactStrictMode: true,
+  env: {
+    SENDGRID_API_KEY:
+      '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',
+  },
   swcMinify: true,
 
   // Uncoment to add domain whitelist
