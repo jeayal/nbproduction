@@ -50,7 +50,7 @@ export default function ContactUs() {
     const isValidForm = handleValidation();
 
     if (isValidForm) {
-      setButtonText('Sending');
+      setButtonText('Envoi en cours...');
       const res = await fetch('/api/sendgrid.js', {
         body: JSON.stringify({
           email: email,
