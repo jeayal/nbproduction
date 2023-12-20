@@ -51,7 +51,7 @@ export default function ContactUs() {
 
     if (isValidForm) {
       setButtonText('Sending');
-      const res = await fetch('/api/sendgrid', {
+      const res = await fetch('/api/sendgrid.js', {
         body: JSON.stringify({
           email: email,
           fullname: fullname,
@@ -69,7 +69,7 @@ export default function ContactUs() {
         console.log(error);
         setShowSuccessMessage(false);
         setShowFailureMessage(true);
-        setButtonText('Send');
+        setButtonText('Envoyer');
 
         // Reset form fields
         setFullname('');
@@ -80,7 +80,7 @@ export default function ContactUs() {
       }
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
-      setButtonText('Send');
+      setButtonText('Envoyer');
       // Reset form fields
       setFullname('');
       setEmail('');
