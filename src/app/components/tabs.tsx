@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import * as React from 'react';
 
+import styles from './style.css';
+
 import CardRow from '@/app/components/card';
 
 const categories = ['Mariage', 'Concerts', 'Publicité', 'Sport', 'Entreprise'];
@@ -58,7 +60,7 @@ export default function LabTabs() {
 
         {/* TAB 1 */}
 
-        <TabPanel value='1' className=' transition'>
+        <TabPanel value='1' className={` ${styles.customStyle}`}>
           <CardRow
             rowInverse={false}
             bgColor='bg-white dark:bg-neutral-800'
