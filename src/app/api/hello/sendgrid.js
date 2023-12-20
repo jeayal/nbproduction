@@ -2,13 +2,6 @@ import sendgrid from '@sendgrid/mail';
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
-export async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ message: 'INVALID_METHOD' });
-    return;
-  }
-}
-
 async function sendEmail(req, res) {
   try {
     await sendgrid.send({

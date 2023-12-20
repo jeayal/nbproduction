@@ -51,7 +51,7 @@ export default function ContactUs() {
 
     if (isValidForm) {
       setButtonText('Envoi en cours...');
-      const res = await fetch('/api/sendgrid.js', {
+      const res = await fetch('./api/sendgrid.js', {
         method: 'POST',
         body: JSON.stringify({
           email: email,

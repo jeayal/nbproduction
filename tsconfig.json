@@ -32,7 +32,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/components/contact.js",
-    "src/app/api/hello/route.ts"
+    "src/app/api/hello/route.ts",
+    "src/app/api/hello/sendgrid.ts"
   ],
   "exclude": ["node_modules"],
   "moduleResolution": ["node_modules", ".next", "node"]
