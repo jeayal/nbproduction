@@ -2,6 +2,10 @@ import sendgrid from '@sendgrid/mail';
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
+export function handler(req, res) {
+  res.status(200).json({ name: 'John Doe' });
+}
+
 async function sendEmail(req, res) {
   try {
     await sendgrid.send({
