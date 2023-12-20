@@ -44,7 +44,7 @@ const VimeoVideos = () => {
                 height='180'
                 allowFullScreen
               ></iframe>
-              <div className='p-8'>
+              <div className='bg-slate-100 p-8 dark:bg-neutral-800'>
                 <h4 className='mb-2 text-left'>{video.name}</h4>
                 <p className='line-clamp-3 text-left text-gray-400	'>
                   {video.description}
@@ -54,7 +54,12 @@ const VimeoVideos = () => {
           </div>
         ))}
       </div>
-      <UnderlineLink href='vimeo.com'>Voir toutes mes vidéos</UnderlineLink>
+      <UnderlineLink
+        href='vimeo.com'
+        className='m-auto text-left text-xl uppercase tracking-widest'
+      >
+        + de vidéos
+      </UnderlineLink>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import * as React from 'react';
 
-import styles from './style.css';
+import styles from './Tabs.module.css';
 
 import CardRow from '@/app/components/card';
 
@@ -60,12 +60,10 @@ export default function LabTabs() {
 
         {/* TAB 1 */}
 
-        <TabPanel value='1' className={` ${styles.customStyle}`}>
+        <TabPanel value='1' className={`${styles.slideIn}`}>
           <CardRow
-            rowInverse={false}
-            bgColor='bg-white dark:bg-neutral-800'
             title={categories[0]}
-            imgSrc='/images/mariages-01.jpg'
+            videoSrc='/videos/mariage.mp4'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
           communiquer. Elle donne une image sérieuse et met en avant votre
@@ -78,12 +76,11 @@ export default function LabTabs() {
 
         {/* TAB 2 */}
 
-        <TabPanel value='2'>
+        <TabPanel value='2' className={`${styles.slideIn}`}>
           <CardRow
-            rowInverse={false}
-            bgColor='bg-white dark:bg-neutral-800'
+            rowInverse
             title={categories[1]}
-            imgSrc='/images/mariages-01.jpg'
+            videoSrc='/videos/concerts.mp4'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
           communiquer. Elle donne une image sérieuse et met en avant votre
@@ -96,12 +93,10 @@ export default function LabTabs() {
 
         {/* TAB 3 */}
 
-        <TabPanel value='3'>
+        <TabPanel value='3' className={`${styles.slideIn}`}>
           <CardRow
-            rowInverse={false}
-            bgColor='bg-white dark:bg-neutral-800'
             title={categories[2]}
-            imgSrc='/images/mariages-01.jpg'
+            videoSrc='/videos/publicite.mp4'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
           communiquer. Elle donne une image sérieuse et met en avant votre
@@ -114,12 +109,11 @@ export default function LabTabs() {
 
         {/* TAB 4 */}
 
-        <TabPanel value='4'>
+        <TabPanel value='4' className={`${styles.slideIn}`}>
           <CardRow
-            rowInverse={false}
-            bgColor='bg-white dark:bg-neutral-800'
+            rowInverse
             title={categories[3]}
-            imgSrc='/images/mariages-01.jpg'
+            videoSrc='/videos/rallye.mp4'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
           communiquer. Elle donne une image sérieuse et met en avant votre
@@ -132,12 +126,11 @@ export default function LabTabs() {
 
         {/* TAB 5 */}
 
-        <TabPanel value='5'>
+        <TabPanel value='5' className={`${styles.slideIn}`}>
           <CardRow
             rowInverse={false}
-            bgColor='bg-white dark:bg-neutral-900'
             title={categories[4]}
-            imgSrc='/images/mariages-01.jpg'
+            videoSrc='/videos/factory.mp4'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
           communiquer. Elle donne une image sérieuse et met en avant votre

@@ -1,0 +1,15 @@
+.slideIn {
+  animation: slideIn 0.5s ease-out; /* Adjust duration and timing function as needed */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

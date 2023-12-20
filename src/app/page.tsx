@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import BlockHomepage from '@/app/components/block';
 import CardRow from '@/app/components/card';
+import ContactUs from '@/app/components/contact.js';
 import VimeoVideos from '@/app/components/vimeoportfolio';
 
 import LabTabs from './components/tabs';
@@ -50,12 +51,15 @@ export default function HomePage() {
         </video>
       </header>
       <section>
-        <div className='layout relative flex min-h-screen w-full flex-col justify-center py-12'>
-          <h1 className='mb-10 text-6xl'>Join the club.</h1>
+        <div
+          id='join-the-club'
+          className='flex min-h-screen w-full flex-col justify-center'
+        >
+          <h1 className='layout mb-10 text-6xl'>Join the club.</h1>
           <CardRow
             rowInverse={true}
             bgColor='bg-slate-100 dark:bg-neutral-800'
-            title='Bonjour'
+            title="Bonjour, moi c'est Nicolas"
             imgSrc='/images/nicolas-blanc-production.jpg'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
@@ -66,7 +70,10 @@ export default function HomePage() {
           vidéos qui correspondront à vos envies et vos besoins.'
           />
         </div>
-        <div className='my-20 w-full bg-slate-100 py-20 dark:bg-neutral-900'>
+        <div
+          id='services'
+          className='h-full min-h-screen w-full bg-slate-100 py-20 dark:bg-neutral-900'
+        >
           <h1 className='mb-10 items-center justify-center text-center text-6xl'>
             Une
             <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>
@@ -82,13 +89,26 @@ export default function HomePage() {
           {/* END OF TABS */}
         </div>
       </section>
-      <section id='vimeo-portfolio' className='flex w-full flex-col'>
+      <section
+        id='portfolio'
+        className='flex h-full min-h-screen w-full flex-col justify-center'
+      >
         <BlockHomepage
-          isBig={true}
-          bgColor='bg-white dark:bg-neutral-800'
+          isBig
           title='Mes dernières vidéos'
           subTitle='Découvrez mon travail à travers quelques vidéos que j ai pu réaliser'
           innerComponent={<VimeoVideos />}
+        />
+      </section>
+      <section
+        id='portfolio'
+        className='flex h-full min-h-screen w-full flex-col justify-center'
+      >
+        <BlockHomepage
+          isBig={true}
+          title='Discutons ensemble de votre projet'
+          subTitle='Découvrez mon travail à travers quelques vidéos que j ai pu réaliser'
+          innerComponent={<ContactUs />}
         />
       </section>
     </div>
