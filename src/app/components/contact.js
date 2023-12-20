@@ -52,6 +52,7 @@ export default function ContactUs() {
     if (isValidForm) {
       setButtonText('Envoi en cours...');
       const res = await fetch('/api/sendgrid.js', {
+        method: 'POST',
         body: JSON.stringify({
           email: email,
           fullname: fullname,
@@ -61,7 +62,6 @@ export default function ContactUs() {
         headers: {
           'Content-Type': 'application/json',
         },
-        method: 'POST',
       });
 
       const { error } = await res.json();
