@@ -6,7 +6,7 @@ import ButtonLink from '@/components/links/ButtonLink';
 
 export default function NavBar() {
   return (
-    <nav className='rou rounded-bl-large rounded-br-large mb sticky top-0 z-30  w-full overflow-hidden  py-6 drop-shadow-xl'>
+    <nav className='rou rounded-bl-large rounded-br-large mb sticky top-0 z-30  -mb-16 w-full overflow-hidden bg-neutral-100 py-6 drop-shadow-xl dark:bg-neutral-900'>
       <div className='layout relative flex flex-row justify-between'>
         <Image
           src='/images/logo-nbp.png'

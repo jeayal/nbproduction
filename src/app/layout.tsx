@@ -48,7 +48,7 @@ export default function RootLayout({
         <Provider>
           <ScrollTheme />
           <NavBar />
-          <main className='flex w-full flex-1 flex-col '>{children}</main>
+          <main className='flex w-full flex-1 flex-col'>{children}</main>
         </Provider>
       </body>
     </html>

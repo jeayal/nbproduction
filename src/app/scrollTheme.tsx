@@ -1,17 +1,18 @@
 'use client';
 
 import * as React from 'react';
-import ScrollToTop from 'react-scroll-to-top';
 
 import '@/styles/globals.css';
 
 import ThemeSwitcher from '@/app/components/themeSwitcher';
 
+import ScrollToTop from './components/scrollToTop';
+
 export default function ScrollTheme() {
   return (
-    <div className='fixed bottom-10 right-10 z-50 flex flex-col gap-6 rounded-full bg-neutral-950 p-4 drop-shadow-xl dark:bg-gray-200'>
+    <div className='fixed bottom-10 right-10 z-50 flex flex-col rounded-full bg-neutral-900 p-4 drop-shadow-xl transition dark:bg-neutral-500'>
       <ThemeSwitcher />
-      <ScrollToTop smooth />
+      <ScrollToTop />
     </div>
   );
 }

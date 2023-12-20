@@ -10,7 +10,7 @@ import LabTabs from './components/tabs';
 
 export default function HomePage() {
   return (
-    <main>
+    <div className='transition-all ease-in-out '>
       <header className='relative mb-12 flex h-screen items-center overflow-hidden'>
         <div className='layout relative z-20 flex flex-row text-white md:flex-col'>
           <div className=' w-3/4'>
@@ -91,6 +91,6 @@ export default function HomePage() {
           innerComponent={<VimeoVideos />}
         />
       </section>
-    </main>
+    </div>
   );
 }

@@ -17,23 +17,48 @@ export default function LabTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%', typography: 'body1' }}>
+    <Box sx={{ width: '100%', typography: 'body1', color: 'text-white' }}>
       <TabContext value={value}>
         <Box>
-          <div className='align-middl my-2 flex flex-row flex-wrap items-center justify-center'>
-            <TabList onChange={handleChange}>
-              <Tab label={categories[0]} value='1' />
-              <Tab label={categories[1]} value='2' />
-              <Tab label={categories[2]} value='3' />
-              <Tab label={categories[3]} value='4' />
-              <Tab label={categories[4]} value='5' />
+          <div className='align-middl m-0 my-2 flex w-full flex-row flex-wrap items-center justify-center'>
+            <TabList onChange={handleChange} sx={{ all: 'initial' }}>
+              <Tab
+                label={categories[0]}
+                value='1'
+                sx={{ all: 'initial' }}
+                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest dark:text-white'
+              />
+              <Tab
+                label={categories[1]}
+                value='2'
+                sx={{ all: 'initial' }}
+                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest dark:text-white'
+              />
+              <Tab
+                label={categories[2]}
+                value='3'
+                sx={{ all: 'initial' }}
+                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest dark:text-white'
+              />
+              <Tab
+                label={categories[3]}
+                value='4'
+                sx={{ all: 'initial' }}
+                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest dark:text-white'
+              />
+              <Tab
+                label={categories[4]}
+                value='5'
+                sx={{ all: 'initial' }}
+                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest dark:text-white'
+              />
             </TabList>
           </div>
         </Box>
 
         {/* TAB 1 */}
 
-        <TabPanel value='1'>
+        <TabPanel value='1' className=' transition'>
           <CardRow
             rowInverse={false}
             bgColor='bg-white dark:bg-neutral-800'
