@@ -104,12 +104,7 @@ export default function HomePage() {
         id='portfolio'
         className='flex h-full min-h-screen w-full flex-col justify-center'
       >
-        <BlockHomepage
-          isBig={true}
-          title='Discutons ensemble de votre projet'
-          subTitle='Découvrez mon travail à travers quelques vidéos que j ai pu réaliser'
-          innerComponent={<ContactUs />}
-        />
+        <ContactUs />
       </section>
     </div>
   );
