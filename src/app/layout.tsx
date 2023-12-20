@@ -5,7 +5,7 @@ import '@/styles/globals.css';
 
 import NavBar from '@/app/components/navbar';
 import Provider from '@/app/components/provider';
-import ThemeSwitcher from '@/app/components/themeSwitcher';
+import ScrollTheme from '@/app/scrollTheme';
 import { siteConfig } from '@/constant/config';
 
 // !STARTERCONF Change these default meta
@@ -33,21 +33,8 @@ export const metadata: Metadata = {
     siteName: siteConfig.title,
     images: [`${siteConfig.url}/images/og.jpg`],
     type: 'website',
-    locale: 'en_US',
+    locale: 'fr_FR',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/images/og.jpg`],
-    // creator: '@th_clarence',
-  },
-  // authors: [
-  //   {
-  //     name: 'Theodorus Clarence',
-  //     url: 'https://theodorusclarence.com',
-  //   },
-  // ],
 };
 
 export default function RootLayout({
@@ -59,11 +46,9 @@ export default function RootLayout({
     <html>
       <body>
         <Provider>
-          <div className='fixed bottom-10 right-10 z-50  h-10 w-10 rounded-full bg-neutral-950 p-8 drop-shadow-xl dark:bg-gray-200'>
-            <ThemeSwitcher />
-          </div>
+          <ScrollTheme />
           <NavBar />
-          <main className='flex w-full flex-1 flex-col  '>{children}</main>
+          <main className='flex w-full flex-1 flex-col '>{children}</main>
         </Provider>
       </body>
     </html>

@@ -1,7 +1,6 @@
 'use client';
 
 import * as React from 'react';
-import ScrollToTop from 'react-scroll-to-top';
 
 import BlockHomepage from '@/app/components/block';
 import CardRow from '@/app/components/card';
@@ -86,13 +85,12 @@ export default function HomePage() {
       <section id='vimeo-portfolio' className='flex w-full flex-col'>
         <BlockHomepage
           isBig={true}
-          bgColor='bg-white'
+          bgColor='bg-white dark:bg-neutral-800'
           title='Mes dernières vidéos'
           subTitle='Découvrez mon travail à travers quelques vidéos que j ai pu réaliser'
           innerComponent={<VimeoVideos />}
         />
       </section>
-      <ScrollToTop smooth />
     </main>
   );
 }
