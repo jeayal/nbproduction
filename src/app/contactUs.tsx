@@ -7,7 +7,8 @@ export default function ContactUs() {
   const [message, setMessage] = useState('');
 
   //   Form validation
-  const [errors, setErrors] = useState({});
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [errors, setErrors] = useState({}) as any;
 
   //   Setting button text
   const [buttonText, setButtonText] = useState('Send');
@@ -16,7 +17,8 @@ export default function ContactUs() {
   const [showFailureMessage, setShowFailureMessage] = useState(false);
 
   const handleValidation = () => {
-    let tempErrors = {};
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const tempErrors: any = {};
     let isValid = true;
 
     if (fullname.length <= 0) {
@@ -44,10 +46,11 @@ export default function ContactUs() {
 
   // const [form, setForm] = useState(false);
 
-  const handleSubmit = async (e) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    let isValidForm = handleValidation();
+    const isValidForm = handleValidation();
 
     if (isValidForm) {
       setButtonText('Envoi en cours');
