@@ -28,10 +28,3 @@ export async function POST() {
 
   return NextResponse.json(data);
 }
-
-export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.status(405).send({ message: 'Only POST requests allowed' });
-    return;
-  }
-}
