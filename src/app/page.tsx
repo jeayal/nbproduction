@@ -5,7 +5,8 @@ import * as React from 'react';
 import BlockHomepage from '@/app/components/block';
 import CardRow from '@/app/components/card';
 import VimeoVideos from '@/app/components/vimeoportfolio';
-import ContactUs from '@/app/contactUsv2';
+// import ContactUs from '@/app/contactUsv2';
+import Contact from '@/app/contactUsv3';
 
 // import Contact from '@/app/contact';
 import LabTabs from './components/tabs';
@@ -105,7 +106,7 @@ export default function HomePage() {
         id='portfolio'
         className='flex h-full min-h-screen w-full flex-col justify-center'
       >
-        <ContactUs />
+        <Contact />
       </section>
     </div>
   );
