@@ -33,7 +33,7 @@
     ".next/types/**/*.ts",
     "src/app/components/contact.js",
     "src/app/api/mail/route.js",
-    "src/app/api/mail/sendgrid.js",
+    "src/app/api/mail/[[...mail]]/sendgrid.js",
     "src/app/api/mail/sendgrid.ts",
     "src/app/contactUs.js"
   ],
