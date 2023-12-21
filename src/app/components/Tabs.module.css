@@ -13,3 +13,7 @@
     opacity: 1;
   }
 }
+
+.tabs {
+  @apply 'mr-6 dark:text-white' cursor-pointer font-sans text-2xl uppercase tracking-widest;
+}

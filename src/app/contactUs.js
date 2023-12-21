@@ -10,13 +10,13 @@ export default function ContactUs() {
   const [errors, setErrors] = useState({});
 
   //   Setting button text
-  const [buttonText, setButtonText] = useState('Envoyer');
+  const [buttonText, setButtonText] = useState('Send');
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
 
   const handleValidation = () => {
-    const tempErrors = {};
+    let tempErrors = {};
     let isValid = true;
 
     if (fullname.length <= 0) {
@@ -42,17 +42,16 @@ export default function ContactUs() {
     return isValid;
   };
 
-  //   const [form, setForm] = useState(false);
+  // const [form, setForm] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const isValidForm = handleValidation();
+    let isValidForm = handleValidation();
 
     if (isValidForm) {
-      setButtonText('Envoi en cours...');
-      const res = await fetch('./api/sendgrid.js', {
-        method: 'POST',
+      setButtonText('Sending');
+      const res = await fetch('/api/sendgrid', {
         body: JSON.stringify({
           email: email,
           fullname: fullname,
@@ -62,6 +61,7 @@ export default function ContactUs() {
         headers: {
           'Content-Type': 'application/json',
         },
+        method: 'POST',
       });
 
       const { error } = await res.json();
@@ -69,7 +69,7 @@ export default function ContactUs() {
         console.log(error);
         setShowSuccessMessage(false);
         setShowFailureMessage(true);
-        setButtonText('Envoyer');
+        setButtonText('Send');
 
         // Reset form fields
         setFullname('');
@@ -80,7 +80,7 @@ export default function ContactUs() {
       }
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
-      setButtonText('Envoyer');
+      setButtonText('Send');
       // Reset form fields
       setFullname('');
       setEmail('');
@@ -94,7 +94,7 @@ export default function ContactUs() {
       <nav className='flex flex-row items-center justify-between'></nav>
       <header
         className='grid grid-cols-1 gap-4  p-8 pt-10 
-       md:h-96 md:grid-cols-2 lg:px-40'
+     md:h-96 md:grid-cols-2 lg:px-40'
       >
         <div className='mx-auto mb-10 px-20 md:mt-20'>
           <h1 className='mt-4 text-6xl font-bold '>
