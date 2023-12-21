@@ -63,7 +63,6 @@ export default function ContactUs() {
         }),
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
         },
         method: 'POST',
       });
