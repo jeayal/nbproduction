@@ -5,7 +5,7 @@ import * as React from 'react';
 import BlockHomepage from '@/app/components/block';
 import CardRow from '@/app/components/card';
 import VimeoVideos from '@/app/components/vimeoportfolio';
-import ContactUs from '@/app/contactUs';
+import ContactUs from '@/app/contactUsv2';
 
 // import Contact from '@/app/contact';
 import LabTabs from './components/tabs';
