@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function Contact() {
+  const customMail = 'contact@blanc-nicolas.com';
   const {
     register,
     handleSubmit,
@@ -20,7 +21,8 @@ export default function Contact() {
   const [message, setMessage] = useState(false);
 
   // Please update the Access Key in the .env
-  const apiKey = process.env.PUBLIC_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE';
+  const apiKey =
+    process.env.PUBLIC_ACCESS_KEY || 'd2358867-ff67-4856-bc87-c0c848359f2e';
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
@@ -139,11 +141,11 @@ export default function Contact() {
             htmlFor='fullname'
             className='mt-8 font-light text-gray-500 dark:text-gray-50'
           >
-            Votre nom<span className='text-red-500 dark:text-gray-50'>*</span>
+            Votre nom<span className='text-red-500'>*</span>
           </label>
           <input
             type='text'
-            placeholder='Full Name'
+            placeholder='John Doe'
             autoComplete='false'
             className={`w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-gray-900 dark:text-white   dark:placeholder:text-gray-200  ${
               errors.name
@@ -151,7 +153,7 @@ export default function Contact() {
                 : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
             }`}
             {...register('name', {
-              required: 'Full name is required',
+              required: 'Votre nom complet est requis',
               maxLength: 80,
             })}
           />
@@ -170,7 +172,7 @@ export default function Contact() {
           <input
             id='email_address'
             type='email'
-            placeholder='Email Address'
+            placeholder='exemple@gmail.com'
             name='email'
             autoComplete='false'
             className={`w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-gray-900 dark:text-white   dark:placeholder:text-gray-200  ${
@@ -179,10 +181,10 @@ export default function Contact() {
                 : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
             }`}
             {...register('email', {
-              required: 'Enter your email',
+              required: 'exemple@gmail.com',
               pattern: {
                 value: /^\S+@\S+$/i,
-                message: 'Please enter a valid email',
+                message: 'Veuillez entrer une adresse email valide.',
               },
             })}
           />
@@ -200,14 +202,14 @@ export default function Contact() {
           </label>
           <textarea
             name='message'
-            placeholder='Your Message'
+            placeholder='Décrivez votre projet ou votre besoin'
             className={`h-36 w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800   focus:ring-4 dark:bg-gray-900  dark:text-white dark:placeholder:text-gray-200  ${
               errors.message
                 ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
                 : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
             }`}
             {...register('message', {
-              required: 'Enter your Message',
+              required: 'Veuillez préciser votre demande',
             })}
           />
           {errors.message && (
@@ -243,19 +245,21 @@ export default function Contact() {
                   ></path>
                 </svg>
               ) : (
-                'Send Message'
+                'Envoyer ma demande'
               )}
             </button>
           </div>
           <div className='text-left'>
             {isSubmitSuccessful && isSuccess && (
               <div className='mt-3 text-center text-sm text-green-500'>
-                {message || 'Success. Message sent successfully'}
+                {message ||
+                  'Votre message a bien été envoyé, je reviens vers vous rapidement.'}
               </div>
             )}
             {isSubmitSuccessful && !isSuccess && (
               <div className='mt-3 text-center text-sm text-red-500'>
-                {message || 'Something went wrong. Please try later.'}
+                {message ||
+                  `Une erreur est survenue. Vous pouvez me contacter directement à ${customMail}`}
               </div>
             )}
           </div>
@@ -310,9 +314,7 @@ export default function Contact() {
                 fill='currentColor'
               />
             </svg>
-            <p className='font-light text-gray-500'>
-              contact@blanc-nicolas.com
-            </p>
+            <p className='font-light text-gray-500'>{customMail}</p>
           </div>
           <div className='card flex cursor-pointer flex-row items-center space-x-4 rounded-md p-8 shadow transition duration-200 hover:shadow-lg'>
             <svg
