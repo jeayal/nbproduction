@@ -58,9 +58,9 @@ export default function ContactUs() {
           subject: subject,
           message: message,
         }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        // headers: {
+        //   'Content-Type': 'application/json',
+        // },
         method: 'POST',
       });
 
