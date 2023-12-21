@@ -61,7 +61,7 @@ export default function ContactUs() {
         // headers: {
         //   'Content-Type': 'application/json',
         // },
-        method: 'POST',
+        method: 'GET',
       });
 
       const { error } = await res.json();
