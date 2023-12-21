@@ -58,10 +58,11 @@ export default function ContactUs() {
           subject: subject,
           message: message,
         }),
-        // headers: {
-        //   'Content-Type': 'application/json',
-        // },
-        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
+        },
+        method: 'POST',
       });
 
       const { error } = await res.json();
