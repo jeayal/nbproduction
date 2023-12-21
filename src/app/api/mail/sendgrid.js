@@ -1,10 +1,8 @@
 import sendgrid from '@sendgrid/mail';
-import { NextApiRequest, NextApiResponse } from 'next';
 
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY!);
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
-async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
+async function sendEmail(req, res) {
   try {
     await sendgrid.send({
       to: 'gregory@shortlyagency.com', // Your email where you'll receive emails

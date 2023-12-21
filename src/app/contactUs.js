@@ -7,8 +7,7 @@ export default function ContactUs() {
   const [message, setMessage] = useState('');
 
   //   Form validation
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [errors, setErrors] = useState({}) as any;
+  const [errors, setErrors] = useState({});
 
   //   Setting button text
   const [buttonText, setButtonText] = useState('Send');
@@ -17,8 +16,7 @@ export default function ContactUs() {
   const [showFailureMessage, setShowFailureMessage] = useState(false);
 
   const handleValidation = () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const tempErrors: any = {};
+    const tempErrors = {};
     let isValid = true;
 
     if (fullname.length <= 0) {
@@ -46,15 +44,15 @@ export default function ContactUs() {
 
   // const [form, setForm] = useState(false);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const isValidForm = handleValidation();
 
     if (isValidForm) {
       setButtonText('Envoi en cours');
-      const res = await fetch('/api/hello/sendgrid', {
+      const res = await fetch('./api/mail/sendgrid', {
+        method: 'POST',
         body: JSON.stringify({
           email: email,
           fullname: fullname,
@@ -63,8 +61,8 @@ export default function ContactUs() {
         }),
         headers: {
           'Content-Type': 'application/json',
+          Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
         },
-        method: 'POST',
       });
 
       const { error } = await res.json();
