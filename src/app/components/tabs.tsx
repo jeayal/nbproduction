@@ -33,13 +33,13 @@ export default function LabTabs() {
             width: '100%',
           }}
         >
-          <div className='layout flex'>
+          <div className='layout relative flex'>
             <TabList
               onChange={handleChange}
               centered
               sx={{ width: '100%' }}
-              className='flex w-full'
-              variant='fullWidth'
+              className='layout flex w-full'
+              variant='scrollable'
               orientation='horizontal'
               visibleScrollbar={false}
               scrollButtons

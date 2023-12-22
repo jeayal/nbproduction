@@ -12,21 +12,21 @@ import { siteConfig } from '@/constant/config';
 
 export default function NavBar() {
   return (
-    <nav className='rounded-bl-large rounded-br-large mb sticky top-0 z-30 -mb-16 w-full overflow-hidden bg-neutral-100 py-6 drop-shadow-xl dark:bg-neutral-900'>
+    <nav className='rounded-bl-large rounded-br-large mb sticky top-0 z-30 -mb-16 w-full overflow-hidden bg-neutral-100 py-2 drop-shadow-xl dark:bg-neutral-900 md:py-6'>
       <div className='layout relative flex flex-row justify-between px-6 md:px-0'>
         <Image
           src='/images/logo-nbp.png'
           width={80}
           height={56}
           alt='Logo NBProductions'
-          className='flex w-[4em] object-contain dark:hidden '
+          className='flex w-[2.5em] object-contain dark:hidden md:w-[4em] '
         />
         <Image
           src='/images/logo-nbp-dark.png'
           width={80}
           height={56}
           alt='Logo NBProductions'
-          className='hidden w-[4em] object-contain dark:flex'
+          className='hidden w-[2.5em] object-contain dark:flex md:w-[4em]'
         />
         <div className='m-0 hidden items-center  justify-center gap-9 align-middle text-xs uppercase tracking-widest lg:flex'>
           {/* // Changer l'url racine dans constant/config -> siteConfig.url */}

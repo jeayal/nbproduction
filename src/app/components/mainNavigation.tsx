@@ -8,19 +8,30 @@ import * as React from 'react';
 
 export default function IconButtonMenu() {
   return (
-    <Dropdown>
+    <Dropdown className='h-[1vh]'>
       <MenuButton
         slots={{ root: IconButton }}
-        slotProps={{ root: { variant: 'outlined', color: 'neutral' } }}
+        slotProps={{ root: { color: 'white' } }}
+        className='flex rounded-full  p-4 hover:bg-neutral-600'
       >
         <MoreVert />
       </MenuButton>
-      <Menu>
-        <MenuItem>Accueil</MenuItem>
-        <MenuItem>Join the Club</MenuItem>
-        <MenuItem>Mes services</MenuItem>
-        <MenuItem>Portfolio</MenuItem>
-        <MenuItem>Contact</MenuItem>
+      <Menu className='flex h-[1OOvw] w-full flex-col  bg-neutral-100 px-6 py-3 transition duration-300 dark:bg-neutral-900'>
+        <MenuItem className=' rounded-md py-6 text-center text-2xl uppercase tracking-widest text-black dark:text-white'>
+          Accueil
+        </MenuItem>
+        <MenuItem className='rounded-md py-6 text-center text-2xl uppercase tracking-widest text-black dark:text-white'>
+          Join the Club
+        </MenuItem>
+        <MenuItem className='rounded-md py-6 text-center text-2xl uppercase tracking-widest text-black dark:text-white'>
+          Mes services
+        </MenuItem>
+        <MenuItem className='rounded-md py-6 text-center text-2xl uppercase tracking-widest text-black dark:text-white'>
+          Portfolio
+        </MenuItem>
+        <MenuItem className='rounded-md py-6 text-center text-2xl uppercase tracking-widest text-black dark:text-white'>
+          Contact
+        </MenuItem>
       </Menu>
     </Dropdown>
   );

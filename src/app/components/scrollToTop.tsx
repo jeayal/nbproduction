@@ -28,7 +28,7 @@ export const ScrollToTop = () => {
   }, []);
 
   return (
-    <div className='transition-all delay-150 duration-300 ease-in-out'>
+    <div className='hidden transition-all delay-150 duration-300 ease-in-out sm:flex'>
       <button
         type='button'
         onClick={scrollToTop}
@@ -36,7 +36,10 @@ export const ScrollToTop = () => {
           isVisible ? 'text-neutral-400 dark:text-neutral-200' : 'hidden'
         }
       >
-        <BiArrowFromBottom className='mt-4 h-10 w-10' aria-hidden='true' />
+        <BiArrowFromBottom
+          className='mt-2 h-5 w-5 md:mt-4 md:h-10 md:w-10'
+          aria-hidden='true'
+        />
       </button>
     </div>
   );

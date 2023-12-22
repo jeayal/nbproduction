@@ -15,7 +15,7 @@ export default function HomePage() {
     <div className='transition-all ease-in-out '>
       <header className='relative mb-12 flex h-screen items-center overflow-hidden'>
         <div className='layout relative z-20 flex flex-row text-white md:flex-col'>
-          <div className=' w-3/4'>
+          <div className='md:w-3/4'>
             <h1 className='mb-4 text-[4em] leading-none md:text-[5em] '>
               Une
               <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>
@@ -46,9 +46,11 @@ export default function HomePage() {
       <section>
         <div
           id='join-the-club'
-          className='flex min-h-screen w-full flex-col items-center justify-center align-middle'
+          className='mb-10 flex min-h-screen w-full flex-col items-center justify-center py-6 align-middle md:mb-0 md:py-0'
         >
-          <h1 className='layout mb-10 text-6xl'>Join the club.</h1>
+          <h1 className='layout mb-10 px-4 text-4xl md:text-6xl'>
+            Join the club.
+          </h1>
           <CardRow
             rowInverse={true}
             bgColor='bg-slate-100 dark:bg-neutral-800'
@@ -69,7 +71,7 @@ export default function HomePage() {
           id='services'
           className='w-full items-center justify-center bg-slate-100 py-16 align-middle dark:bg-neutral-900'
         >
-          <h1 className='mb-10 items-center justify-center text-center text-6xl'>
+          <h1 className='mb-10 items-center justify-center px-4 text-center text-4xl md:text-6xl'>
             Une
             <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>
               &nbsp;vidéo&nbsp;
@@ -77,6 +79,7 @@ export default function HomePage() {
             pour <br />
             chacun de vos <span className='bg-blue box-content'>besoins</span>.
           </h1>
+
           <LabTabs />
         </div>
       </section>
@@ -119,11 +122,11 @@ export default function HomePage() {
         id='contact'
         className='layout justify-cente flex min-h-screen  w-full flex-col items-center gap-10 md:flex-row md:gap-24'
       >
-        <div className='layout flex flex-col  md:w-1/2'>
-          <h1 className='text-6xl font-bold'>
+        <div className='layout flex flex-col  px-2 md:w-1/2'>
+          <h1 className='text-4xl font-bold md:text-6xl'>
             Discutons ensemble de votre projet !
           </h1>
-          <p className='mt-6 text-sm font-normal'>
+          <p className='mt-4 text-sm font-normal md:mt-6'>
             Remplissez ce petit formulaire pour connaitre vos besoins. Vous
             pouvez également me contacter sur les réseaux sociaux.
           </p>

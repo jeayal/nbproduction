@@ -67,7 +67,7 @@ export default function Contact() {
           type='text'
           placeholder='John Doe'
           autoComplete='false'
-          className={`w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-gray-900 dark:text-white   dark:placeholder:text-gray-200  ${
+          className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-200  ${
             errors.name
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
@@ -95,7 +95,7 @@ export default function Contact() {
           placeholder='exemple@gmail.com'
           name='email'
           autoComplete='false'
-          className={`w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-gray-900 dark:text-white   dark:placeholder:text-gray-200  ${
+          className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-200  ${
             errors.email
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
@@ -124,7 +124,7 @@ export default function Contact() {
         <textarea
           name='message'
           placeholder='Décrivez votre projet ou votre besoin'
-          className={`h-36 w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800   focus:ring-4 dark:bg-gray-900  dark:text-white dark:placeholder:text-gray-200  ${
+          className={`border-1 mt-2 h-36 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800   focus:ring-4 dark:bg-neutral-900  dark:text-white dark:placeholder:text-gray-200  ${
             errors.message
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
@@ -142,7 +142,7 @@ export default function Contact() {
         <div className='flex flex-row items-center justify-start'>
           <button
             type='submit'
-            className='mt-8 flex flex-row items-center rounded-md bg-[#130F49] px-10 py-2 text-lg font-light text-gray-50'
+            className='mt-8 flex flex-row items-center justify-center rounded-md bg-blue-500 px-10 py-2 align-middle text-lg font-light text-gray-50 transition hover:scale-105 hover:bg-blue-400'
           >
             {isSubmitting ? (
               <svg

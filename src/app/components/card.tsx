@@ -25,21 +25,24 @@ export default function CardRow({
         rowInverse ? 'md:flex-row' : 'md:flex-row-reverse'
       } `}
     >
-      <div id='txt' className='flex flex-col justify-evenly p-10 md:w-2/3'>
+      <div
+        id='txt'
+        className='flex flex-col justify-evenly px-6 py-8 md:w-2/3 md:p-10'
+      >
         <div className='flex flex-col justify-between text-left'>
-          <h1 className='text-l mb-6'>{title}</h1>
+          <h1 className='mb-6 text-2xl'>{title}</h1>
           <p className='mb-6'>{innerText}</p>
         </div>
-        <div className='flex flex-col gap-4 p-6 text-center md:flex-row '>
+        <div className='mb-4 flex flex-col gap-4 text-center md:mb-0 md:flex-row md:p-6 '>
           <ButtonLink
-            className='justify-center px-10 uppercase'
+            className='justify-center uppercase md:px-10'
             href={btn1Src ? btn1Src : '/contact'}
             variant='outline'
           >
             {btn1Title ? btn1Title : 'Contactez-moi'}
           </ButtonLink>
           <ButtonLink
-            className=' justify-center px-10 uppercase'
+            className=' justify-center uppercase md:px-10'
             href={btn2Src ? btn2Src : '/contact'}
             variant='primary'
           >

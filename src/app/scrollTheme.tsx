@@ -11,7 +11,7 @@ import ScrollToTop from './components/scrollToTop';
 
 export default function ScrollTheme() {
   return (
-    <div className='fixed bottom-10 right-10 z-50 flex flex-col rounded-full bg-neutral-900 p-4 drop-shadow-xl transition dark:bg-neutral-500'>
+    <div className='fixed bottom-5 right-5 z-50 flex flex-col rounded-full bg-neutral-900 p-4 drop-shadow-xl transition dark:bg-neutral-500 md:bottom-10 md:right-10'>
       <ThemeSwitcher />
       <ScrollToTop />
     </div>
