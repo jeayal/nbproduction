@@ -27,18 +27,9 @@ export default function HomePage() {
               N’attendez plus pour briller sur les réseaux sociaux !
             </p>
           </div>
-          <div className=' flex flex-auto items-center justify-end gap-10 align-middle text-2xl uppercase sm:hidden md:w-full md:flex-row lg:w-1/2'>
-            <ul>
-              <li>mariages</li>
-              <li>évènement</li>
-              <li>sport</li>
-              <li>prublicité</li>
-              <li>entreprise</li>
-            </ul>
-          </div>
         </div>
         <video
-          autoPlay={true}
+          autoPlay
           loop
           muted
           className='absolute z-10 min-h-full w-auto min-w-full max-w-none'
