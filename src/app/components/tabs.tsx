@@ -22,37 +22,37 @@ export default function LabTabs() {
     <Box sx={{ width: '100%', typography: 'body1', color: 'text-white' }}>
       <TabContext value={value}>
         <Box>
-          <div className='align-middl m-0 my-2 flex w-full flex-row flex-wrap items-center justify-center'>
+          <div className='m-auto flex w-full flex-row flex-wrap items-center justify-center align-middle'>
             <TabList onChange={handleChange} sx={{ all: 'initial' }}>
               <Tab
                 label={categories[0]}
                 value='1'
-                sx={{ all: 'initial' }}
-                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest dark:text-white'
+                // sx={{ all: 'initial' }}
+                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest text-black dark:text-white'
               />
               <Tab
                 label={categories[1]}
                 value='2'
-                sx={{ all: 'initial' }}
-                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest dark:text-white'
+                // sx={{ all: 'initial' }}
+                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest text-black dark:text-white'
               />
               <Tab
                 label={categories[2]}
                 value='3'
-                sx={{ all: 'initial' }}
-                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest dark:text-white'
+                // sx={{ all: 'initial' }}
+                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest text-black dark:text-white'
               />
               <Tab
                 label={categories[3]}
                 value='4'
-                sx={{ all: 'initial' }}
-                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest dark:text-white'
+                // sx={{ all: 'initial' }}
+                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest text-black dark:text-white'
               />
               <Tab
                 label={categories[4]}
                 value='5'
-                sx={{ all: 'initial' }}
-                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest dark:text-white'
+                // sx={{ all: 'initial' }}
+                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest text-black dark:text-white'
               />
             </TabList>
           </div>

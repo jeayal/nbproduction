@@ -1,7 +1,12 @@
+/* eslint-disable no-console */
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
 
 import ButtonLink from '@/components/links/ButtonLink';
+
+import { siteConfig } from '@/constant/config';
 
 export default function NavBar() {
   return (
@@ -12,25 +17,32 @@ export default function NavBar() {
           width={80}
           height={56}
           alt='Logo NBProductions'
-          className='object-contain'
+          className='flex object-contain dark:hidden'
         />
-
+        <Image
+          src='/images/logo-nbp-dark.png'
+          width={80}
+          height={56}
+          alt='Logo NBProductions'
+          className='hidden object-contain dark:flex'
+        />
         <div className='m-0 flex items-center justify-center gap-9 align-middle text-xs uppercase tracking-widest'>
-          <a href='/'>
+          {/* // Changer l'url racine dans constant/config -> siteConfig.url */}
+          <a href={siteConfig.url}>
             <p>Accueil</p>
           </a>
           <a href='#join-the-club'>
             <p>Join the club</p>
           </a>
+          <a href='#services'>
+            <p>Mes services</p>
+          </a>
           <a href='#portfolio'>
             <p>Portfolio</p>
           </a>
-          <a href='#contact'>
-            <p>Contact</p>
-          </a>
           <ButtonLink
-            className='items-center justify-center px-10 text-center align-middle tracking-normal'
-            href='/components'
+            className='items-center justify-center px-10 text-center align-middle text-xs tracking-normal'
+            href='#contact'
             variant='primary'
           >
             Faire un devis

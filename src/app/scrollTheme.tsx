@@ -1,5 +1,6 @@
 'use client';
 
+// Scroll to Top + Theme Mode switcher - Shortly Agency v1.5 2023
 import * as React from 'react';
 
 import '@/styles/globals.css';

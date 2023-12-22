@@ -13,7 +13,6 @@ const VimeoVideos = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        // Replace 'YOUR_VIMEO_ACCESS_TOKEN' with your actual Vimeo access token
         const accessToken = '64e9cbbc33b3214de42c88fd80fcc918';
         const response = await axios.get(
           `https://api.vimeo.com/me/videos?access_token=${accessToken}&per_page=${viewCount}`
@@ -29,19 +28,19 @@ const VimeoVideos = () => {
   }, []);
 
   return (
-    <div className='flex flex-col'>
-      <div className='mb-10 flex flex-row flex-wrap items-center justify-center gap-6 self-stretch px-4 align-middle drop-shadow-lg md:px-0 md:drop-shadow-2xl'>
+    <div className='layout m-0 flex flex-col'>
+      <div className='mb-10 flex flex-row flex-wrap items-center justify-center gap-2 self-stretch  align-middle drop-shadow-lg  md:drop-shadow-2xl'>
         {videos.map((video) => (
           <div
             key={video.id}
-            className='w-full overflow-hidden rounded-xl bg-slate-100 md:w-[320px]'
+            className='overflow-hidden rounded-xl bg-slate-100 md:w-1/3'
           >
             <a href={`https://player.vimeo.com/video/${video.id}`}>
               <iframe
                 title={video.name}
                 src={`https://player.vimeo.com/video/${video.id}`}
-                width='320'
-                height='180'
+                width='full'
+                height='full'
                 allowFullScreen
               ></iframe>
               <div className='bg-slate-100 p-8 dark:bg-neutral-800'>

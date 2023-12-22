@@ -8,8 +8,7 @@ import Provider from '@/app/components/provider';
 import ScrollTheme from '@/app/scrollTheme';
 import { siteConfig } from '@/constant/config';
 
-// !STARTERCONF Change these default meta
-// !STARTERCONF Look at @/constant/config to change them
+// Changer les meta dans /constant/config/ts - Shortly Agency 2023
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -18,8 +17,8 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   robots: { index: true, follow: true },
-  // !STARTERCONF this is the default favicon, you can generate your own from https://realfavicongenerator.net/
-  // ! copy to /favicon folder
+
+  // Changer ici Favicon - Shortly Agency 2023
   icons: {
     icon: '/favicon/favicon.ico',
     shortcut: '/favicon/favicon-16x16.png',
