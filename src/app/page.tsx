@@ -31,9 +31,11 @@ export default function HomePage() {
           </div>
         </div>
         <video
-          autoPlay
           loop
           muted
+          autoPlay
+          playsInline
+          webkit-playsinline
           className='absolute z-10 min-h-full w-auto min-w-full max-w-none'
         >
           <source
