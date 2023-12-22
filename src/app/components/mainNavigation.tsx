@@ -13,6 +13,7 @@ export default function IconButtonMenu() {
         slots={{ root: IconButton }}
         slotProps={{ root: { color: 'white' } }}
         className='flex rounded-full  p-4 hover:bg-neutral-600'
+        aria-label='Menu déroulant'
       >
         <MoreVert />
       </MenuButton>

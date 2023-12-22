@@ -58,6 +58,7 @@ export default function NavBar() {
             className='items-center justify-center px-10 text-center align-middle text-xs tracking-normal'
             href='#contact'
             variant='primary'
+            aria-label='Demande de devis'
           >
             Faire un devis
           </ButtonLink>

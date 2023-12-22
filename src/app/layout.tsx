@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang='fr_FR'>
       <body>
         <Provider>
           <ScrollTheme />
