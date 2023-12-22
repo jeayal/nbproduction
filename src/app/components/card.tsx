@@ -11,7 +11,8 @@ export default function CardRow({
   imgAlt,
   rowInverse,
   bgColor,
-  videoSrc,
+  videoSrcMp4,
+  videoSrcWebm,
   btn1Title,
   btn2Title,
   btn1Src,
@@ -36,14 +37,14 @@ export default function CardRow({
         <div className='mb-4 flex flex-col gap-4 text-center md:mb-0 md:flex-row md:p-6 '>
           <ButtonLink
             className='justify-center uppercase md:px-10'
-            href={btn1Src ? btn1Src : '/contact'}
+            href={btn1Src ? btn1Src : '/#contact'}
             variant='outline'
           >
             {btn1Title ? btn1Title : 'Contactez-moi'}
           </ButtonLink>
           <ButtonLink
             className=' justify-center uppercase md:px-10'
-            href={btn2Src ? btn2Src : '/contact'}
+            href={btn2Src ? btn2Src : '/#contact'}
             variant='primary'
           >
             {btn2Title ? btn2Title : 'Faire un devis'}
@@ -51,7 +52,7 @@ export default function CardRow({
         </div>
       </div>
       <div className='flex md:w-1/3'>
-        {videoSrc ? (
+        {videoSrcMp4 || videoSrcWebm ? (
           <video
             loop
             muted
@@ -60,7 +61,8 @@ export default function CardRow({
             webkit-playsinline
             className='object-cover'
           >
-            <source src={videoSrc} type='video/mp4' />
+            <source src={videoSrcWebm} type='video/webm' />
+            <source src={videoSrcMp4} type='video/mp4' />
           </video>
         ) : (
           <Image

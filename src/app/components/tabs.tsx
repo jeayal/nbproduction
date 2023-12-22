@@ -84,7 +84,8 @@ export default function LabTabs() {
         <TabPanel value='1' className={`${styles.slideIn}`}>
           <CardRow
             title={categories[0]}
-            videoSrc='/videos/mariage.mp4'
+            videoSrcMp4='/videos/mariage.mp4'
+            videoSrcWebm='/videos/mariage.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
           communiquer. Elle donne une image sérieuse et met en avant votre
@@ -101,7 +102,8 @@ export default function LabTabs() {
           <CardRow
             rowInverse
             title={categories[1]}
-            videoSrc='/videos/concerts.mp4'
+            videoSrcMp4='/videos/concerts.mp4'
+            videoSrcWebm='/videos/concerts.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
           communiquer. Elle donne une image sérieuse et met en avant votre
@@ -117,7 +119,8 @@ export default function LabTabs() {
         <TabPanel value='3' className={`${styles.slideIn}`}>
           <CardRow
             title={categories[2]}
-            videoSrc='/videos/publicite.mp4'
+            videoSrcMp4='/videos/publicite.mp4'
+            videoSrcWebm='/videos/publicite.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
           communiquer. Elle donne une image sérieuse et met en avant votre
@@ -134,7 +137,8 @@ export default function LabTabs() {
           <CardRow
             rowInverse
             title={categories[3]}
-            videoSrc='/videos/rallye.mp4'
+            videoSrcMp4='/videos/rallye.mp4'
+            videoSrcWebm='/videos/rallye.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
           communiquer. Elle donne une image sérieuse et met en avant votre
@@ -151,7 +155,8 @@ export default function LabTabs() {
           <CardRow
             rowInverse={false}
             title={categories[4]}
-            videoSrc='/videos/factory.mp4'
+            videoSrcMp4='/videos/factory.mp4'
+            videoSrcWebm='/videos/factory.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
           communiquer. Elle donne une image sérieuse et met en avant votre

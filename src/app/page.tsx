@@ -39,7 +39,11 @@ export default function HomePage() {
           className='absolute z-10 min-h-full w-auto min-w-full max-w-none'
         >
           <source
-            src='https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4'
+            src='header-nicolas-blanc-production-video.webm'
+            type='video/webm'
+          />
+          <source
+            src='header-nicolas-blanc-production-video.mp4'
             type='video/mp4'
           />
           Votre navigateur ne supporte pas l'utilisation de vidéo ici.
