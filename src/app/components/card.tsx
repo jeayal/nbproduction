@@ -52,7 +52,14 @@ export default function CardRow({
       </div>
       <div className='flex md:w-1/3'>
         {videoSrc ? (
-          <video loop muted autoPlay className='object-cover'>
+          <video
+            loop
+            muted
+            autoPlay
+            playsInline
+            webkit-playsinline
+            className='object-cover'
+          >
             <source src={videoSrc} type='video/mp4' />
           </video>
         ) : (

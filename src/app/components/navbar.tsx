@@ -12,7 +12,7 @@ import { siteConfig } from '@/constant/config';
 
 export default function NavBar() {
   return (
-    <nav className='rounded-bl-large rounded-br-large mb sticky top-0 z-30 -mb-16 w-full overflow-hidden bg-neutral-100 py-2 drop-shadow-xl dark:bg-neutral-900 md:py-6'>
+    <nav className='md:rounded-bl-large md:rounded-br-large mb sticky top-0 z-30 -mb-16 w-full overflow-hidden bg-neutral-100 py-2 drop-shadow-xl dark:bg-neutral-900 md:py-6'>
       <div className='layout relative flex flex-row justify-between px-6 md:px-0'>
         <Image
           src='/images/logo-nbp.png'
