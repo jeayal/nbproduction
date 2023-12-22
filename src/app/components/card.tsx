@@ -3,6 +3,8 @@ import * as React from 'react';
 
 import ButtonLink from '@/components/links/ButtonLink';
 /* eslint-disable @typescript-eslint/no-explicit-any */
+const button = { primary: 'Contactez-moi', secondary: 'Faire un devis' };
+const buttonUrl = { primary: '/#contact', secondary: '/#contact' };
 
 export default function CardRow({
   title,
@@ -37,17 +39,19 @@ export default function CardRow({
         <div className='mb-4 flex flex-col gap-4 text-center md:mb-0 md:flex-row md:p-6 '>
           <ButtonLink
             className='justify-center uppercase md:px-10'
-            href={btn1Src ? btn1Src : '/#contact'}
+            href={btn1Src ? btn1Src : `${buttonUrl.primary}`}
             variant='outline'
+            aria-label={button.primary}
           >
-            {btn1Title ? btn1Title : 'Contactez-moi'}
+            {btn1Title ? btn1Title : `${button.primary}`}
           </ButtonLink>
           <ButtonLink
             className=' justify-center uppercase md:px-10'
-            href={btn2Src ? btn2Src : '/#contact'}
+            href={btn2Src ? btn2Src : `${buttonUrl.secondary}`}
             variant='primary'
+            aria-label={button.secondary}
           >
-            {btn2Title ? btn2Title : 'Faire un devis'}
+            {btn2Title ? btn2Title : `${button.secondary}`}
           </ButtonLink>
         </div>
       </div>

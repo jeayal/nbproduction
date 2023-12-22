@@ -39,11 +39,11 @@ export default function HomePage() {
           className='absolute z-10 min-h-full w-auto min-w-full max-w-none'
         >
           <source
-            src='header-nicolas-blanc-production-video.webm'
+            src='/videos/header-nicolas-blanc-production-video.webm'
             type='video/webm'
           />
           <source
-            src='header-nicolas-blanc-production-video.mp4'
+            src='/videos/header-nicolas-blanc-production-video.mp4'
             type='video/mp4'
           />
           Votre navigateur ne supporte pas l'utilisation de vidéo ici.
