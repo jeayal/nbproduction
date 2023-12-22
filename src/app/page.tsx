@@ -15,14 +15,15 @@ export default function HomePage() {
       <header className='relative mb-12 flex h-screen items-center overflow-hidden'>
         <div className='layout relative z-20 flex flex-row text-white md:flex-col'>
           <div className=' w-3/4'>
-            <h1 className='mb-4 sm:text-5xl md:text-6xl lg:text-8xl'>
+            <h1 className='mb-4 text-[4em] leading-none md:text-[5em] '>
               Une
               <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>
                 &nbsp;vidéo&nbsp;
               </span>
+              <br />
               pour sublimer votre image de marque.
             </h1>
-            <p className='text-2xl'>
+            <p className='text-[1.5em] leading-7'>
               La vidéo est l’un des moyens les plus efficaces pour communiquer.
               N’attendez plus pour briller sur les réseaux sociaux !
             </p>

@@ -1664,6 +1664,27 @@
   resolved "https://registry.npmjs.org/@mui/core-downloads-tracker/-/core-downloads-tracker-5.15.1.tgz"
   integrity sha512-y/nUEsWHyBzaKYp9zLtqJKrLod/zMNEWpMj488FuQY9QTmqBiyUhI2uh7PVaLqLewXRtdmG6JV0b6T5exyuYRw==
 
+"@mui/icons-material@^5.15.1":
+  version "5.15.1"
+  resolved "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.15.1.tgz"
+  integrity sha512-VPJdBSyap6uOxCb5BLbWbkvd6aeJCp1pQZm8DcZBITCH0NOSv8Mz9c8Zvo8xr4Od7+xyWHUAgvRSL4047pL2WQ==
+  dependencies:
+    "@babel/runtime" "^7.23.5"
+
+"@mui/joy@^5.0.0-beta.19":
+  version "5.0.0-beta.19"
+  resolved "https://registry.npmjs.org/@mui/joy/-/joy-5.0.0-beta.19.tgz"
+  integrity sha512-L3tutkCsJ4pI20LCiQthnXKMIv6GCJqbjPmzCjLvIUwp8kNhgQzauWc4ToYHP7FzZSoDt4HjwY52mvKhVrtytw==
+  dependencies:
+    "@babel/runtime" "^7.23.5"
+    "@mui/base" "5.0.0-beta.28"
+    "@mui/core-downloads-tracker" "^5.15.1"
+    "@mui/system" "^5.15.1"
+    "@mui/types" "^7.2.11"
+    "@mui/utils" "^5.15.1"
+    clsx "^2.0.0"
+    prop-types "^15.8.1"
+
 "@mui/lab@^5.0.0-alpha.157":
   version "5.0.0-alpha.157"
   resolved "https://registry.npmjs.org/@mui/lab/-/lab-5.0.0-alpha.157.tgz"
@@ -1677,7 +1698,7 @@
     clsx "^2.0.0"
     prop-types "^15.8.1"
 
-"@mui/material@^5.15.1", "@mui/material@>=5.10.11":
+"@mui/material@^5.0.0", "@mui/material@^5.15.1", "@mui/material@>=5.10.11":
   version "5.15.1"
   resolved "https://registry.npmjs.org/@mui/material/-/material-5.15.1.tgz"
   integrity sha512-WA5DVyvacxDakVyAhNqu/rRT28ppuuUFFw1bLpmRzrCJ4uw/zLTATcd4WB3YbB+7MdZNEGG/SJNWTDLEIyn3xQ==

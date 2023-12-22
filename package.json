@@ -22,6 +22,8 @@
     "@emotion/styled": "^11.11.0",
     "@hcaptcha/react-hcaptcha": "^1.9.2",
     "@heroicons/react": "^2.1.1",
+    "@mui/icons-material": "^5.15.1",
+    "@mui/joy": "^5.0.0-beta.19",
     "@mui/lab": "^5.0.0-alpha.157",
     "@mui/material": "^5.15.1",
     "@sendgrid/mail": "^8.1.0",
