@@ -19,40 +19,61 @@ export default function LabTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%', typography: 'body1', color: 'text-white' }}>
+    <Box
+      sx={{
+        width: '100%',
+        margin: 'O',
+        typography: 'body1',
+        color: 'text-white',
+      }}
+    >
       <TabContext value={value}>
-        <Box>
-          <div className='m-auto flex w-full flex-row flex-wrap items-center justify-center align-middle'>
-            <TabList onChange={handleChange} sx={{ all: 'initial' }}>
+        <Box
+          sx={{
+            width: '100%',
+          }}
+        >
+          <div className='layout flex'>
+            <TabList
+              onChange={handleChange}
+              centered
+              sx={{ width: '100%' }}
+              className='flex w-full'
+              variant='fullWidth'
+              orientation='horizontal'
+              visibleScrollbar={false}
+              scrollButtons
+              allowScrollButtonsMobile
+            >
               <Tab
                 label={categories[0]}
                 value='1'
                 // sx={{ all: 'initial' }}
-                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest text-black dark:text-white'
+                className='mr-6 flex cursor-pointer font-sans text-sm uppercase tracking-widest text-black dark:text-white md:text-2xl'
               />
               <Tab
                 label={categories[1]}
                 value='2'
                 // sx={{ all: 'initial' }}
-                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest text-black dark:text-white'
+                className='mr-6 flex cursor-pointer font-sans text-sm uppercase  tracking-widest text-black dark:text-white md:text-2xl'
               />
               <Tab
                 label={categories[2]}
                 value='3'
                 // sx={{ all: 'initial' }}
-                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest text-black dark:text-white'
+                className='mr-6 flex cursor-pointer font-sans text-sm uppercase  tracking-widest text-black dark:text-white md:text-2xl'
               />
               <Tab
                 label={categories[3]}
                 value='4'
                 // sx={{ all: 'initial' }}
-                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest text-black dark:text-white'
+                className='mr-6 flex cursor-pointer font-sans text-sm uppercase  tracking-widest text-black dark:text-white md:text-2xl'
               />
               <Tab
                 label={categories[4]}
                 value='5'
                 // sx={{ all: 'initial' }}
-                className='mr-6 cursor-pointer font-sans text-2xl uppercase tracking-widest text-black dark:text-white'
+                className='flex cursor-pointer font-sans text-sm uppercase  tracking-widest text-black dark:text-white md:text-2xl'
               />
             </TabList>
           </div>

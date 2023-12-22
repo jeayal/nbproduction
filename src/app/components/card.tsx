@@ -59,6 +59,7 @@ export default function CardRow({
             height={750}
             alt={imgAlt}
             className='object-cover'
+            layout='responsive'
           />
         )}
       </div>

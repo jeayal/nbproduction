@@ -5,6 +5,7 @@ import Image from 'next/image';
 import React from 'react';
 
 import ButtonLink from '@/components/links/ButtonLink';
+import UnderlineLink from '@/components/links/UnderlineLink';
 
 import IconButtonMenu from '@/app/components/mainNavigation';
 import { siteConfig } from '@/constant/config';
@@ -29,18 +30,30 @@ export default function NavBar() {
         />
         <div className='m-0 hidden items-center  justify-center gap-9 align-middle text-xs uppercase tracking-widest lg:flex'>
           {/* // Changer l'url racine dans constant/config -> siteConfig.url */}
-          <a href={siteConfig.url}>
-            <p>Accueil</p>
-          </a>
-          <a href='#join-the-club'>
-            <p>Join the club</p>
-          </a>
-          <a href='#services'>
-            <p>Mes services</p>
-          </a>
-          <a href='#portfolio'>
-            <p>Portfolio</p>
-          </a>
+          <UnderlineLink
+            href={siteConfig.url}
+            className='m-auto text-left text-xs uppercase tracking-widest'
+          >
+            Accueil
+          </UnderlineLink>
+          <UnderlineLink
+            href='#join-the-club'
+            className='m-auto text-left text-xs uppercase tracking-widest'
+          >
+            Join the club
+          </UnderlineLink>
+          <UnderlineLink
+            href='#services'
+            className='m-auto text-left text-xs uppercase tracking-widest'
+          >
+            Mes services
+          </UnderlineLink>
+          <UnderlineLink
+            href='#portfolio'
+            className='m-auto text-left text-xs uppercase tracking-widest'
+          >
+            Portfolio
+          </UnderlineLink>
           <ButtonLink
             className='items-center justify-center px-10 text-center align-middle text-xs tracking-normal'
             href='#contact'

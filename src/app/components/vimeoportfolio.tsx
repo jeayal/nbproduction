@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // components/VimeoVideos.js
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
@@ -20,7 +21,7 @@ const VimeoVideos = () => {
 
         setVideos(response.data.data);
       } catch (error) {
-        error;
+        console.log(error);
       }
     };
 
@@ -28,22 +29,21 @@ const VimeoVideos = () => {
   }, []);
 
   return (
-    <div className='layout m-0 flex flex-col'>
-      <div className='mb-10 flex flex-row flex-wrap items-center justify-center gap-2 self-stretch  align-middle drop-shadow-lg  md:drop-shadow-2xl'>
+    <div className=' m-auto flex w-full flex-col px-16'>
+      <div className='mb-10 flex flex-row flex-wrap items-center justify-center align-middle drop-shadow-lg md:drop-shadow-2xl'>
         {videos.map((video) => (
           <div
             key={video.id}
-            className='overflow-hidden rounded-xl bg-slate-100 md:w-1/3'
+            className='flex flex-col flex-wrap items-center justify-center gap-16 overflow-hidden rounded-xl bg-slate-100 align-middle md:w-1/3 md:flex-row'
           >
             <a href={`https://player.vimeo.com/video/${video.id}`}>
               <iframe
                 title={video.name}
                 src={`https://player.vimeo.com/video/${video.id}`}
-                width='full'
-                height='full'
                 allowFullScreen
+                className='flex flex-col object-fill'
               ></iframe>
-              <div className='bg-slate-100 p-8 dark:bg-neutral-800'>
+              <div className='flex flex-col bg-slate-100 p-8 dark:bg-neutral-800'>
                 <h4 className='mb-2 text-left'>{video.name}</h4>
                 <p className='line-clamp-3 text-left text-gray-400	'>
                   {video.description}

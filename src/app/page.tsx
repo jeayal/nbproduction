@@ -4,7 +4,8 @@ import * as React from 'react';
 
 import BlockHomepage from '@/app/components/block';
 import CardRow from '@/app/components/card';
-import VimeoVideos from '@/app/components/vimeoportfolio';
+// import VimeoVideos from '@/app/components/vimeoportfolio';
+import VideoCard from '@/app/components/videoCard';
 import Contact from '@/app/contactComponent';
 
 import LabTabs from './components/tabs';
@@ -87,9 +88,30 @@ export default function HomePage() {
           isBig
           title='Mes dernières vidéos'
           subTitle='Découvrez mon travail à travers quelques vidéos que j ai pu réaliser'
-          innerComponent={<VimeoVideos />}
+          innerComponent={
+            <div className='layout m-auto flex w-full flex-col gap-6 sm:flex-row'>
+              <VideoCard
+                src='/images/mariages-01.jpg'
+                title="Triathlon du lac d'Issarlès"
+                txt="Teaser réalisé pour la promotion d'un nouveau triathlon en 2024"
+              />
+              <VideoCard
+                src='/images/mariages-01.jpg'
+                title='Demo Nicolas Blanc
+                '
+                txt='Vidéo promotionnelle pour Nicolas Blanc Production'
+              />
+              <VideoCard
+                src='/images/mariages-01.jpg'
+                title='Publicité Clio Trophy Swiss
+                '
+                txt="Création d'une publicité pour un trophée automobile Renault"
+              />
+            </div>
+          }
         />
       </section>
+      {/* <VimeoVideos /> */}
 
       {/* CONTACT */}
 
