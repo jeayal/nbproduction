@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import * as React from 'react';
 
@@ -49,6 +50,7 @@ export default function RootLayout({
           <NavBar />
           <main className='flex w-full flex-1 flex-col'>{children}</main>
         </Provider>
+        <SpeedInsights />
       </body>
     </html>
   );
