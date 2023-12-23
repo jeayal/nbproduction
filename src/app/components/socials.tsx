@@ -3,7 +3,7 @@
 import React from 'react';
 const social = {
   size: '32px',
-  margin: 6,
+  margin: 'mr-6',
   lk: 'https://www.linkedin.com/profile',
   ig: 'https://www.linkedin.com/profile',
   tw: 'https://www.linkedin.com/profile',
@@ -25,7 +25,7 @@ export default function Socials({ lk, tw, vi, fb, ig }: any) {
           fill='currentColor'
           className={`bi bi-facebook text-primary ${
             fb ? 'block' : 'hidden'
-          } hover:text-secondary mr-${
+          } hover:text-secondary ${
             social.margin
           } transition hover:scale-105 dark:text-gray-50`}
           viewBox='0 0 16 16'
@@ -41,7 +41,7 @@ export default function Socials({ lk, tw, vi, fb, ig }: any) {
           fill='currentColor'
           className={`bi bi-twitter text-primary ${
             tw ? 'block' : 'hidden'
-          } hover:text-secondary mr-${
+          } hover:text-secondary ${
             social.margin
           } transition hover:scale-105 dark:text-gray-50`}
           viewBox='0 0 16 16'
@@ -57,7 +57,7 @@ export default function Socials({ lk, tw, vi, fb, ig }: any) {
           fill='currentColor'
           className={`bi bi-instagram text-primary ${
             ig ? 'block' : 'hidden'
-          } hover:text-secondary mr-${
+          } hover:text-secondary ${
             social.margin
           } transition hover:scale-105 dark:text-gray-50`}
           viewBox='0 0 16 16'
@@ -73,7 +73,7 @@ export default function Socials({ lk, tw, vi, fb, ig }: any) {
           fill='currentColor'
           className={`bi bi-linkedin text-primary ${
             lk ? 'block' : 'hidden'
-          } hover:text-secondary mr-${
+          } hover:text-secondary ${
             social.margin
           } transition hover:scale-105 dark:text-gray-50`}
           viewBox='0 0 16 16'
@@ -89,7 +89,7 @@ export default function Socials({ lk, tw, vi, fb, ig }: any) {
           fill='currentColor'
           className={`bi bi-vimeo text-primary ${
             vi ? 'block' : 'hidden'
-          } hover:text-secondary mr-${
+          } hover:text-secondary ${
             social.margin
           } transition hover:scale-105 dark:text-neutral-900`}
           viewBox='0 0 512 512'

@@ -47,31 +47,31 @@ export default function LabTabs() {
               <Tab
                 label={categories[0]}
                 value='1'
-                // sx={{ all: 'initial' }}
+                sx={{ all: 'initial' }}
                 className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[1]}
                 value='2'
-                // sx={{ all: 'initial' }}
+                sx={{ all: 'initial' }}
                 className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[2]}
                 value='3'
-                // sx={{ all: 'initial' }}
+                sx={{ all: 'initial' }}
                 className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[3]}
                 value='4'
-                // sx={{ all: 'initial' }}
+                sx={{ all: 'initial' }}
                 className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[4]}
                 value='5'
-                // sx={{ all: 'initial' }}
+                sx={{ all: 'initial' }}
                 className={`dark:text-white ${styles.tabsScroll} m-0`}
               />
             </TabList>
