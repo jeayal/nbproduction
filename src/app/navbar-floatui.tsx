@@ -90,7 +90,7 @@ const dropdownNavs = [
       },
     ],
   },
-];
+]; // ! Dropdown cassé ne pas utiliser
 
 export default function NavBarDropdown() {
   const [state, setState] = useState(false);
@@ -99,7 +99,6 @@ export default function NavBarDropdown() {
     idx: null,
   });
 
-  // Replace javascript:void(0) paths with your paths
   const navigation = [
     {
       title: 'Accueil',
@@ -119,7 +118,7 @@ export default function NavBarDropdown() {
         setDrapdownState({ isActive: false, idx: null });
     };
   }, []);
-
+  // const constItem = { item: null }; // ! {item}... is possibly 'undefined' workaround mais ça marche pas.
   return (
     <>
       <div className='fixed top-0 z-50 m-auto w-full overflow-hidden drop-shadow-lg '>
@@ -258,7 +257,7 @@ export default function NavBarDropdown() {
                           className='flex w-full items-center justify-between text-black hover:text-blue-500 dark:text-white'
                           onClick={() =>
                             setDrapdownState({
-                              idx,
+                              idx: null,
                               isActive: !drapdownState.isActive,
                             })
                           }
@@ -302,12 +301,12 @@ export default function NavBarDropdown() {
                           {item.title}
                         </a>
                       )}
-                      {item.isDrapdown &&
+                      {/* {item.isDrapdown &&
                       drapdownState.idx == idx &&
                       drapdownState.isActive ? (
                         <div className='inset-x-0 top-20 ml-3 mt-6 w-full  md:absolute md:mt-0 md:border-y md:shadow-md'>
                           <ul className='mx-auto grid max-w-screen-xl items-center gap-6 md:grid-cols-2 md:p-8 lg:grid-cols-3'>
-                            {item?.navs.map((dropdownItem, idx) => (
+                            {constItem?.navs.map((dropdownItem, idx) => (
                               <li key={idx}>
                                 <p className='text-sm text-blue-600'>
                                   {dropdownItem.label}
@@ -340,7 +339,7 @@ export default function NavBarDropdown() {
                         </div>
                       ) : (
                         ''
-                      )}
+                      )} */}
                     </li>
                   );
                 })}
