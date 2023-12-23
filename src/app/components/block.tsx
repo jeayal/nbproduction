@@ -12,11 +12,10 @@ export default function BlockHomepage({
     return (
       <div className={`m-0 flex w-full flex-col ${bgColor} py-16`}>
         <div className='mb-10'>
-          <h1 className='layout items-center justify-center text-left text-4xl md:text-6xl'>
+          <h1 className='layout flex items-center justify-center text-left text-4xl md:text-6xl'>
             {title}
           </h1>
           <p className=' layout mt-2 flex justify-center text-sm md:text-xl'>
-            {' '}
             {subTitle}
           </p>
         </div>

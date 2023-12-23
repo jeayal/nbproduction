@@ -33,12 +33,11 @@ export default function LabTabs() {
             width: '100%',
           }}
         >
-          <div className='layout relative flex'>
+          <div className=' relative mx-auto  flex '>
             <TabList
               onChange={handleChange}
-              centered
               sx={{ width: '100%' }}
-              className='layout flex w-full'
+              className='layout w-auto'
               variant='scrollable'
               orientation='horizontal'
               visibleScrollbar={false}
@@ -49,31 +48,31 @@ export default function LabTabs() {
                 label={categories[0]}
                 value='1'
                 // sx={{ all: 'initial' }}
-                className='mr-6 flex cursor-pointer font-sans text-sm uppercase tracking-widest text-black dark:text-white md:text-2xl'
+                className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[1]}
                 value='2'
                 // sx={{ all: 'initial' }}
-                className='mr-6 flex cursor-pointer font-sans text-sm uppercase  tracking-widest text-black dark:text-white md:text-2xl'
+                className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[2]}
                 value='3'
                 // sx={{ all: 'initial' }}
-                className='mr-6 flex cursor-pointer font-sans text-sm uppercase  tracking-widest text-black dark:text-white md:text-2xl'
+                className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[3]}
                 value='4'
                 // sx={{ all: 'initial' }}
-                className='mr-6 flex cursor-pointer font-sans text-sm uppercase  tracking-widest text-black dark:text-white md:text-2xl'
+                className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[4]}
                 value='5'
                 // sx={{ all: 'initial' }}
-                className='flex cursor-pointer font-sans text-sm uppercase  tracking-widest text-black dark:text-white md:text-2xl'
+                className={`dark:text-white ${styles.tabsScroll} m-0`}
               />
             </TabList>
           </div>

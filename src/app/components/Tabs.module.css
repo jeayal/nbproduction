@@ -13,3 +13,7 @@
     opacity: 1;
   }
 }
+
+.tabsScroll {
+  @apply mr-6 flex cursor-pointer font-sans text-sm uppercase tracking-widest text-black dark:text-white md:text-2xl;
+}

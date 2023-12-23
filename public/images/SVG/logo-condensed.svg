@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 311.43 308.14">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: NewakeDemo, Newake;
+        font-size: 241.94px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: Halcom-Regular, Halcom;
+        font-size: 90.98px;
+        letter-spacing: .15em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <text class="cls-2" transform="translate(0 284.58)"><tspan x="0" y="0">PROD</tspan></text>
+    <text class="cls-1" transform="translate(2.07 205.77)"><tspan x="0" y="0">Nb</tspan></text>
+  </g>
+</svg>

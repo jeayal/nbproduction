@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import '@/styles/globals.css';
 
+import Footer from '@/app/components/footer';
 import NavBar from '@/app/components/navbar';
 import Provider from '@/app/components/provider';
 import ScrollTheme from '@/app/scrollTheme';
@@ -50,6 +51,7 @@ export default function RootLayout({
           <NavBar />
           <main className='flex w-full flex-1 flex-col'>{children}</main>
         </Provider>
+        <Footer />
         <SpeedInsights />
       </body>
     </html>
