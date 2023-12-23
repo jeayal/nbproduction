@@ -30,12 +30,12 @@ export default function Footer() {
         </div>
         <div
           id='centre'
-          className='mx-auto my-10 flex flex-col items-center justify-between align-middle md:my-0'
+          className='mx-auto my-10 flex flex-col items-center justify-evenly align-middle md:my-0'
         >
           <form className='mb-10 flex w-full flex-col md:mb-0'>
             <label
               htmlFor='subscribe'
-              className='mb-2 pb-2 text-xs font-bold uppercase tracking-[0.3em] text-gray-500 dark:text-gray-400 md:text-xl'
+              className='mb-2 pb-2 text-xs font-bold uppercase tracking-[0.3em] text-gray-500 dark:text-gray-400 md:text-sm'
             >
               Abonnez-vous à ma
               <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>

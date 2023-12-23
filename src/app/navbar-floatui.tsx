@@ -129,6 +129,7 @@ export default function NavBarDropdown() {
         >
           <div className='mx-auto max-w-screen-xl items-center gap-x-14 px-8 md:flex md:px-10'>
             <div className='flex items-center justify-between py-3  md:block md:py-5'>
+              {/* LOGO */}
               <a href='/#'>
                 <svg
                   id='LOGO'
@@ -138,7 +139,7 @@ export default function NavBarDropdown() {
                   width='120'
                   height='60'
                   viewBox='0 0 443.65 146.81'
-                  className='transition hover:text-blue-500'
+                  className=' transition hover:text-blue-500'
                 >
                   <path
                     d='M105.9,79.65c5.63,0,10.35,4.53,10.31,11.4,0,6.92-4.72,11.4-10.31,11.4h-11.18v12.89h-4.84v-35.7h16.02ZM111.17,91.03c.03-4.75-2.5-7.31-5.27-7.31h-11.18v14.66h11.18c2.75,0,5.27-2.53,5.27-7.35h0Z'
@@ -208,6 +209,7 @@ export default function NavBarDropdown() {
                   />
                 </svg>
               </a>
+              {/* END LOGO */}
               <div className='md:hidden'>
                 <button
                   className='text-neutral-900-500 transition hover:text-blue-500'
@@ -355,8 +357,8 @@ export default function NavBarDropdown() {
                   </li> */}
                   <li>
                     <a
-                      href='javascript:void(0)'
-                      className='mb-6 block rounded-lg bg-blue-500 px-6 py-3 text-center text-sm font-medium uppercase tracking-widest text-white shadow transition hover:scale-105 hover:bg-blue-400 active:bg-blue-700 active:shadow-none md:mb-0 md:inline'
+                      href='/#contact'
+                      className='mb-6 block rounded-lg bg-gradient-to-r from-blue-500 to-sky-400 px-6 py-3 text-center text-sm font-medium uppercase tracking-widest text-white shadow  transition hover:scale-105 hover:to-blue-700 active:bg-blue-700 active:shadow-none md:mb-0 md:inline'
                     >
                       Faire un devis
                     </a>

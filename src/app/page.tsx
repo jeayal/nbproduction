@@ -6,7 +6,7 @@ import BlockHomepage from '@/app/components/block';
 import CardRow from '@/app/components/card';
 import Socials from '@/app/components/socials';
 // import VimeoVideos from '@/app/components/vimeoportfolio';
-import VideoCard from '@/app/components/videoCard';
+import VideoCard from '@/app/components/videoCardv2';
 import Contact from '@/app/contactComponent';
 
 import LabTabs from './components/tabs';
@@ -102,14 +102,14 @@ export default function HomePage() {
             <div className='layout m-auto flex w-full flex-col gap-6 sm:flex-row'>
               <VideoCard
                 src='/images/triathlon.jpg'
-                url='https://vimeo.com/870214438'
+                url='https://player.vimeo.com/video/870214438?h=4be2a58690&autoplay=1&title=0&byline=0&portrait=0'
                 alt="Triathlon du lac d'Issarlès"
                 title="Triathlon du lac d'Issarlès"
                 txt="Teaser réalisé pour la promotion d'un nouveau triathlon en 2024"
               />
               <VideoCard
                 src='/images/swiss-trophy.jpg'
-                url='https://vimeo.com/800797995'
+                url='https://player.vimeo.com/video/800797995?h=adc4eef2d3&autoplay=1&title=0&byline=0&portrait=0'
                 alt='Publicité Clio Trophy Swiss'
                 title='Publicité Clio Trophy Swiss
                 '
@@ -117,7 +117,7 @@ export default function HomePage() {
               />
               <VideoCard
                 src='/images/demo.jpg'
-                url='https://vimeo.com/883981611'
+                url='https://player.vimeo.com/video/883981611?h=574bbb9db7&autoplay=1&title=0&byline=0&portrait=0' // ! url exemple: 'https://player.vimeo.com/video/870214438?h=4be2a58690&autoplay=1&title=0&byline=0&portrait=0' => il faut ces tokens Vimeo
                 alt='Demo Nicolas Blanc Production'
                 title='Demo Nicolas Blanc'
                 txt='Vidéo promotionnelle pour Nicolas Blanc Production'
