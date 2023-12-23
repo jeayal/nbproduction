@@ -15,11 +15,14 @@ const styleTab = {
   // all: 'initial',
   // marginRight: 6,
   display: 'flex',
+
   cursor: 'pointer',
   fontFamily: 'sans-serif',
-  fontSize: '1.7em',
+  fontSize: { xs: '1em', md: '1.3em', lg: '1.5em' },
   textTransform: 'uppercase',
   letterSpacing: '0.2em',
+  color: 'var(--tw-text-opactiy)', // !important Compatibilité Dark Mode ici
+  justifyContent: 'space-between',
 };
 
 export default function LabTabs() {

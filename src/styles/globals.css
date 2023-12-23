@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 :root {
-  scroll-behavior: smooth;
-
   /* #region  /**=========== Primary Color =========== */
   --tw-color-primary-50: 240 249 255;
   --tw-color-primary-100: 224 242 254;

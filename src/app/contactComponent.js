@@ -4,6 +4,8 @@ import useWeb3Forms from '@web3forms/react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+import styles from './contactForm.module.css';
+
 export default function Contact() {
   const customMail = 'contact@blanc-nicolas.com';
   const {
@@ -41,7 +43,9 @@ export default function Contact() {
   });
 
   return (
-    <div className='  w-full'>
+    <div
+      className={`w-full ${styles.formStroke} overflow-hidden rounded-xl drop-shadow-2xl`}
+    >
       <form
         onSubmit={handleSubmit(onSubmit)}
         className='flex flex-col rounded-lg bg-neutral-100 px-8 py-8 shadow-xl dark:bg-neutral-800'
@@ -142,7 +146,7 @@ export default function Contact() {
         <div className='flex flex-row items-center justify-start'>
           <button
             type='submit'
-            className='mt-8 flex flex-row items-center justify-center rounded-md bg-blue-500 px-10 py-2 align-middle text-lg font-light text-gray-50 transition hover:scale-105 hover:bg-blue-400'
+            className='mt-8 flex flex-row items-center justify-center rounded-md bg-blue-500 px-10 py-2 align-middle text-lg font-light text-gray-50 transition hover:scale-105 hover:bg-blue-400 active:scale-95'
           >
             {isSubmitting ? (
               <svg

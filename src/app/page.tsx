@@ -76,7 +76,7 @@ export default function HomePage() {
       <section>
         <div
           id='services'
-          className='h-full w-full items-center justify-center bg-slate-100 py-24 align-middle dark:bg-neutral-900'
+          className='h-full w-full items-center justify-center bg-slate-100 py-32 align-middle dark:bg-neutral-900'
         >
           <h1 className='mb-10 items-center justify-center px-4 text-center text-4xl md:text-6xl'>
             Une
