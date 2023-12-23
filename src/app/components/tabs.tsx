@@ -11,6 +11,17 @@ import CardRow from '@/app/components/card';
 
 const categories = ['Mariage', 'Concerts', 'Publicité', 'Sport', 'Entreprise'];
 
+const styleTab = {
+  // all: 'initial',
+  // marginRight: 6,
+  display: 'flex',
+  cursor: 'pointer',
+  fontFamily: 'sans-serif',
+  fontSize: '1.7em',
+  textTransform: 'uppercase',
+  letterSpacing: '0.2em',
+};
+
 export default function LabTabs() {
   const [value, setValue] = React.useState('1');
 
@@ -36,8 +47,13 @@ export default function LabTabs() {
           <div className=' relative mx-auto  flex '>
             <TabList
               onChange={handleChange}
-              sx={{ width: '100%' }}
-              className='layout w-auto'
+              sx={{
+                display: 'flex',
+                gap: '20',
+                maxWidth: '68.75rem',
+                margin: 'auto',
+              }}
+              // className='layout w-auto'
               variant='scrollable'
               orientation='horizontal'
               visibleScrollbar={false}
@@ -47,32 +63,32 @@ export default function LabTabs() {
               <Tab
                 label={categories[0]}
                 value='1'
-                sx={{ all: 'initial' }}
-                className={`dark:text-white ${styles.tabsScroll}`}
+                sx={styleTab}
+                // className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[1]}
                 value='2'
-                sx={{ all: 'initial' }}
-                className={`dark:text-white ${styles.tabsScroll}`}
+                sx={styleTab}
+                // className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[2]}
                 value='3'
-                sx={{ all: 'initial' }}
-                className={`dark:text-white ${styles.tabsScroll}`}
+                sx={styleTab}
+                // className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[3]}
                 value='4'
-                sx={{ all: 'initial' }}
-                className={`dark:text-white ${styles.tabsScroll}`}
+                sx={styleTab}
+                // className={`dark:text-white ${styles.tabsScroll}`}
               />
               <Tab
                 label={categories[4]}
                 value='5'
-                sx={{ all: 'initial' }}
-                className={`dark:text-white ${styles.tabsScroll} m-0`}
+                sx={styleTab}
+                // className={`dark:text-white ${styles.tabsScroll} m-0`}
               />
             </TabList>
           </div>
