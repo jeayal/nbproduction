@@ -358,6 +358,7 @@ export default function NavBarDropdown() {
                   <li>
                     <a
                       href='/#contact'
+                      onClick={() => setState(false)}
                       className='mb-6 block rounded-lg bg-gradient-to-r from-blue-500 to-sky-400 px-6 py-3 text-center text-sm font-medium uppercase tracking-widest text-white shadow  transition hover:scale-105 hover:to-blue-700 active:bg-blue-700 active:shadow-none md:mb-0 md:inline'
                     >
                       Faire un devis
