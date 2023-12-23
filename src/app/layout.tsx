@@ -5,8 +5,9 @@ import * as React from 'react';
 import '@/styles/globals.css';
 
 import Footer from '@/app/components/footer';
-import NavBar from '@/app/components/navbar';
+// import NavBar from '@/app/components/navbar';
 import Provider from '@/app/components/provider';
+import NavBarDropdown from '@/app/navbar-floatui';
 import ScrollTheme from '@/app/scrollTheme';
 import { siteConfig } from '@/constant/config';
 
@@ -48,7 +49,7 @@ export default function RootLayout({
       <body>
         <Provider>
           <ScrollTheme />
-          <NavBar />
+          <NavBarDropdown />
           <main className='flex w-full flex-1 flex-col'>{children}</main>
         </Provider>
         <Footer />

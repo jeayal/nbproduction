@@ -4,4 +4,5 @@ export const siteConfig = {
   description:
     "Emmenez votre marque à l'étape supérieure grâce à une vidéo de qualité professionnelle !",
   url: 'https://blanc-nicolas.com',
+  services: ['Mariage', 'Concerts', 'Publicité', 'Sport', 'Entreprise'],
 };

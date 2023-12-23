@@ -6,6 +6,8 @@ import { useForm } from 'react-hook-form';
 
 import styles from './contactForm.module.css';
 
+import { siteConfig } from '@/constant/config';
+
 export default function Contact() {
   const customMail = 'contact@blanc-nicolas.com';
   const {
@@ -61,17 +63,17 @@ export default function Contact() {
           Demande de devis
         </h1>
 
-        <label
+        {/* <label
           htmlFor='fullname'
           className='mt-8 font-light text-gray-500 dark:text-gray-50'
         >
           Votre nom<span className='text-red-500'>*</span>
-        </label>
+        </label> */}
         <input
           type='text'
-          placeholder='John Doe'
+          placeholder='Votre nom'
           autoComplete='false'
-          className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-200  ${
+          className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-600  ${
             errors.name
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
@@ -86,30 +88,30 @@ export default function Contact() {
             <small>{errors.name.message}</small>
           </div>
         )}
-
+        {/* 
         <label
           htmlFor='email'
           className='mt-4 font-light text-gray-500 dark:text-gray-50'
         >
           Votre e-mail<span className='text-red-500'>*</span>
-        </label>
+        </label> */}
         <input
           id='email_address'
           type='email'
-          placeholder='exemple@gmail.com'
+          placeholder='Votre adresse email'
           name='email'
           autoComplete='false'
-          className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-200  ${
+          className={`border-1  mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-600  ${
             errors.email
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
           }`}
           {...register('email', {
-            required: 'exemple@gmail.com',
+            required: 'Veuillez entrer votre adresse email',
             pattern: {
               // value: /^\S+@\S+$/i, ORIGINAL
               value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,6}$/i,
-              message: 'Veuillez entrer une adresse email valide.',
+              message: "Votre email n'a pas l'air valide",
             },
           })}
         />
@@ -119,16 +121,51 @@ export default function Contact() {
           </div>
         )}
 
-        <label
+        {/* <label
           htmlFor='message'
           className='mt-4 font-light text-gray-500 dark:text-gray-50'
         >
           Votre demande<span className='text-red-500'>*</span>
-        </label>
+        </label> */}
+
+        <select
+          name='BesoinChoix'
+          id='needChoice'
+          placeholder='Quel est votre besoin ?'
+          className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none focus:ring-4 active:text-gray-800 dark:bg-neutral-900 dark:text-white dark:placeholder:text-gray-600  ${
+            errors.message
+              ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
+              : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
+          }`}
+          {...register('choice', {
+            required: 'Veuillez préciser votre besoin',
+          })}
+        >
+          <option disabled selected>
+            Quel est votre besoin ?
+          </option>
+          <option value={siteConfig.services[0]}>
+            {siteConfig.services[0]}
+          </option>
+          <option value={siteConfig.services[1]}>
+            {siteConfig.services[1]}
+          </option>
+          <option value={siteConfig.services[2]}>
+            {siteConfig.services[2]}
+          </option>
+          <option value={siteConfig.services[3]}>
+            {siteConfig.services[3]}
+          </option>
+          <option value={siteConfig.services[4]}>
+            {siteConfig.services[4]}
+          </option>
+          <option value='Autre'>Autre</option>
+        </select>
+
         <textarea
           name='message'
           placeholder='Décrivez votre projet ou votre besoin'
-          className={`border-1 mt-2 h-36 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800   focus:ring-4 dark:bg-neutral-900  dark:text-white dark:placeholder:text-gray-200  ${
+          className={`border-1 mt-2 h-36 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800   focus:ring-4 dark:bg-neutral-900  dark:text-white dark:placeholder:text-gray-600  ${
             errors.message
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'

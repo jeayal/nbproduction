@@ -9,13 +9,14 @@ export default function Footer() {
     <div className='bg-neutral-100 dark:bg-neutral-800'>
       <div className='layout relative flex flex-col justify-between pt-10 md:flex-row md:py-16'>
         <div id='gauche' className='relative flex flex-col md:mr-0'>
-          <div className=' relative mx-auto flex items-center justify-center overflow-hidden rounded-xl bg-neutral-950 object-contain p-8 align-middle text-white drop-shadow-lg dark:bg-neutral-200 dark:text-black'>
+          <div className=' relative mx-auto flex items-center justify-center overflow-hidden rounded-xl bg-neutral-950 object-contain p-4 align-middle text-white drop-shadow-lg dark:bg-neutral-200 dark:text-black md:p-8'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='100'
               height='100'
               fill='currentColor'
               viewBox='0 0 295.9 249.49'
+              className='h-[70px] w-[70px] md:h-[100px] md:w-[100px]'
             >
               <path d='M29.67,184.53c10.04,0,18.46,8.09,18.4,20.34,0,12.34-8.42,20.35-18.4,20.35H9.73v23H1.08v-63.69h28.59ZM39.08,204.83c.05-8.48-4.47-13.04-9.41-13.04H9.72v26.16h19.95c4.9,0,9.41-4.51,9.41-13.12h0Z' />
               <path d='M85.24,222.83v25.39h-8.64v-63.69h27.68c10.03,0,18.45,7.61,18.38,19.15,0,9.15-5.22,15.76-12.3,18.16l15.49,26.38h-10.27l-13.88-25.39h-16.45ZM104.27,215.57c5.16,0,9.4-4.25,9.4-11.93.04-7.56-4.2-11.85-9.4-11.84h-19.03v23.77h19.03Z' />
@@ -34,7 +35,7 @@ export default function Footer() {
           <form className='mb-10 flex w-full flex-col md:mb-0'>
             <label
               htmlFor='subscribe'
-              className='mb-2 font-bold uppercase tracking-[0.3em] text-gray-500 dark:text-gray-400'
+              className='mb-2 pb-2 text-xs font-bold uppercase tracking-[0.3em] text-gray-500 dark:text-gray-400 md:text-xl'
             >
               Abonnez-vous à ma
               <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>
@@ -68,7 +69,7 @@ export default function Footer() {
               </button>
             </div>
           </form>
-          <Socials tk lk ig tw fb vi />
+          <Socials tk lk ig tw fb vi size='16px' faded />
         </div>
         <div className=' flex flex-row flex-wrap justify-center gap-2 pb-10 text-center text-neutral-500 md:flex-col md:items-end md:justify-end md:pb-0'>
           <p>Mentions légales.</p>

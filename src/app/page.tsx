@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <div className='transition-all ease-in-out '>
       <header className='relative mb-12 flex h-screen items-center overflow-hidden'>
-        <div className='layout relative z-20 flex flex-row text-white md:flex-col'>
+        <div className='layout relative z-[15] flex flex-row text-white md:flex-col'>
           <div className='md:w-3/4'>
             <h1 className='mb-4 text-[4em] leading-none md:text-[5em] '>
               Une
@@ -142,11 +142,11 @@ export default function HomePage() {
             </span>
             !
           </h1>
-          <p className='my-4 text-sm font-normal md:mt-6'>
+          <p className='mb-8 mt-4 text-sm font-normal md:mt-6'>
             Remplissez ce petit formulaire pour connaitre vos besoins. Vous
             pouvez également me contacter sur les réseaux sociaux.
           </p>
-          <Socials yt tw vi fb lk ig />
+          <Socials yt tw vi fb lk ig size='24px' />
         </div>
         <div className='layout mb-10 flex md:w-1/2'>
           <Contact />
