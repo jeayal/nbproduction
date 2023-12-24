@@ -13,6 +13,7 @@ export default function CardRow({
   innerText,
   imgSrc,
   imgAlt,
+  layout,
   rowInverse,
   bgColor,
   videoSrcMp4,
@@ -24,7 +25,11 @@ export default function CardRow({
 }: any) {
   return (
     <div
-      className={`layout relative flex flex-col overflow-hidden rounded-xl  ${styles.formStroke} drop-shadow-2xl`}
+      className={` ${
+        layout ? 'layout' : ''
+      } md:layout relative flex flex-col overflow-hidden rounded-xl  ${
+        styles.formStroke
+      } drop-shadow-2xl`}
     >
       <div
         className={` relative flex flex-col overflow-hidden rounded-lg ${

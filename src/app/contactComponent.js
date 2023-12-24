@@ -140,7 +140,7 @@ export default function Contact() {
             required: 'Veuillez ajouter votre numéro de téléphone',
             pattern: {
               // value: /^\S+@\S+$/i, ORIGINAL
-              value: /^[0-9]{9}$/i,
+              value: /^[0-9]{10}$/i,
               message: "Votre numéro de téléphone n'a pas l'air valide.",
             },
           })}

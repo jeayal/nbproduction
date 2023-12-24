@@ -52,14 +52,12 @@ export default function HomePage() {
           Votre navigateur ne supporte pas l'utilisation de vidéo ici.
         </video>
       </header>
-      <section>
+      <section className='py-10'>
         <div
           id='join-the-club'
           className='mb-10 flex min-h-screen w-full flex-col items-center justify-center py-6 align-middle md:mb-0 md:py-0'
         >
-          <h1 className='layout mb-10 px-4 text-4xl md:text-6xl'>
-            Join the club.
-          </h1>
+          <h1 className='layout  px-4 text-4xl md:text-6xl'>Join the club.</h1>
           <CardRowBig
             rowInverse={true}
             bgColor='bg-slate-100 dark:bg-neutral-800'
