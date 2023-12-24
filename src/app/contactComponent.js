@@ -161,6 +161,7 @@ export default function Contact() {
         <select
           name='BesoinChoix'
           id='needChoice'
+          aria-label='Sélectionnez votre besoin ou projet'
           placeholder='Quel est votre besoin ?'
           className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none focus:ring-4 active:text-gray-800 dark:bg-neutral-900 dark:text-white dark:placeholder:text-gray-600  ${
             errors.message
@@ -214,6 +215,7 @@ export default function Contact() {
           <div className='flex flex-row items-center justify-start'>
             <button
               type='submit'
+              aria-label='Envoyer ma demande'
               className='mt-8 flex flex-row items-center justify-center rounded-md bg-blue-500 px-10 py-2 align-middle text-lg font-light text-gray-50 transition hover:scale-105 hover:bg-blue-400 active:scale-95'
             >
               {isSubmitting ? (

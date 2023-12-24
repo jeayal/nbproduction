@@ -103,6 +103,11 @@ export default function Testimonials() {
                       : 'bg-gray-300'
                   }`}
                   onClick={() => setCurrentTestimonial(idx)}
+                  aria-label={`${
+                    currentTestimonial == idx
+                      ? 'Témoignagne client actuel'
+                      : 'Parcourir les témoignages clients'
+                  }`}
                 ></button>
               </li>
             ))}

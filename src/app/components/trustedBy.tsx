@@ -16,13 +16,13 @@ export default function TrustedLogos() {
     <div className='px-12'>
       <div className='mx-auto max-w-screen-xl '>
         <div className='mx-auto max-w-2xl text-center'>
-          <h3 className='mb-6 text-4xl font-bold md:text-6xl'>
+          <h1 className='mb-6 text-4xl font-bold md:text-6xl'>
             Ils m'ont fait
             <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>
               &nbsp;confiance
             </span>
             .
-          </h3>
+          </h1>
           <p className='mt-3'>{subTitle}</p>
         </div>
         <div className='mt-12 flex justify-center'>

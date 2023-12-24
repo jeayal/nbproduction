@@ -42,9 +42,9 @@ export default function VideoCard({ src, title, txt, alt, url }: any) {
             />
           </div>
           <div className='flex flex-col bg-slate-100 from-blue-500 to-sky-400 p-8 group-hover:bg-gradient-to-r dark:bg-neutral-800'>
-            <h4 className='mb-2 text-left text-xl group-hover:text-white'>
+            <h1 className='mb-2 text-left text-xl group-hover:text-white'>
               {title}
-            </h4>
+            </h1>
             <p className='line-clamp-3 text-left text-gray-400 group-hover:text-white'>
               {txt}
             </p>

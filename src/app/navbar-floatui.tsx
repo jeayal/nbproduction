@@ -130,7 +130,7 @@ export default function NavBarDropdown() {
           <div className='mx-auto max-w-screen-xl items-center gap-x-14 px-8 md:flex md:px-10'>
             <div className='flex items-center justify-between py-3  md:block md:py-5'>
               {/* LOGO */}
-              <a href='/#'>
+              <a href='/#' aria-label="Accéder à l'accueil du site">
                 <svg
                   id='LOGO'
                   data-name='Nicolas Blanc Production Logo'
@@ -246,16 +246,17 @@ export default function NavBarDropdown() {
               </div>
             </div>
             <div
-              className={`nav-menu mt-8 flex-1 pb-3 md:mt-0 md:block md:pb-0 ${
+              className={` mt-8 flex-1 justify-end pb-3 md:mt-0 md:block md:pb-0 ${
                 state ? 'block' : 'hidden'
               }`}
             >
-              <ul className='items-center space-y-12  md:flex md:space-x-6 md:space-y-0'>
+              <ul className='items-center space-y-12 md:flex md:space-x-6 md:space-y-0'>
                 {navigation.map((item, idx) => {
                   return (
                     <li key={idx}>
                       {item.isDrapdown ? (
                         <button
+                          aria-label='Ouvrir ou fermer le menu de navigation'
                           className='flex w-full items-center justify-between text-black hover:text-blue-500 dark:text-white'
                           onClick={() =>
                             setDrapdownState({
@@ -345,26 +346,15 @@ export default function NavBarDropdown() {
                     </li>
                   );
                 })}
-                <div className='flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0'>
-                  {/* DEUXIEME BOUTON MD:ON
-                  <li>
-                    <a
-                      href='javascript:void(0)'
-                      className='block rounded-lg border py-3 text-center text-gray-700 hover:text-indigo-600 md:border-none'
-                    >
-                      Log in
-                    </a>
-                  </li> */}
-                  <li>
-                    <a
-                      href='/#contact'
-                      onClick={() => setState(false)}
-                      className='mb-6 block rounded-lg bg-gradient-to-r from-blue-500 to-sky-400 px-6 py-3 text-center text-sm font-medium uppercase tracking-widest text-white shadow  transition hover:scale-105 hover:to-blue-700 active:bg-blue-700 active:shadow-none md:mb-0 md:inline'
-                    >
-                      Faire un devis
-                    </a>
-                  </li>
-                </div>
+                <li className='layout relative w-full flex-1 md:flex md:justify-end'>
+                  <a
+                    href='/#contact'
+                    onClick={() => setState(false)}
+                    className='mb-6 block rounded-lg bg-gradient-to-r from-blue-500 to-sky-400 px-6 py-3 text-center text-sm font-medium uppercase tracking-widest text-white shadow  transition hover:scale-105 hover:to-blue-700 active:bg-blue-700 active:shadow-none md:mb-0 md:inline'
+                  >
+                    Faire un devis
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
