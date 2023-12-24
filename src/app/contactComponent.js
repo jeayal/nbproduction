@@ -24,9 +24,11 @@ export default function Contact() {
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
+  const [isHuman, setIsHuman] = useState(false);
 
   const onHCaptchaChange = (token) => {
     setValue('h-captcha-response', token);
+    setIsHuman(true);
   };
   const apiKey =
     process.env.PUBLIC_ACCESS_KEY || 'd2358867-ff67-4856-bc87-c0c848359f2e';
@@ -184,7 +186,7 @@ export default function Contact() {
             <small>{errors.message.message}</small>
           </div>
         )}
-        {!isSubmitSuccessful && (
+        {!isSubmitSuccessful && isHuman && (
           <div className='flex flex-row items-center justify-start'>
             <button
               type='submit'
@@ -230,10 +232,22 @@ export default function Contact() {
             </div>
           )}
         </div>
-        <HCaptcha
-          sitekey='50b2fe65-b00b-4b9e-ad62-3ba471098be2'
-          onVerify={onHCaptchaChange}
-        />
+        <div className='my-4'>
+          {!isHuman && (
+            <div className='mt-3 rounded-lg border-2 border-solid border-yellow-500 p-6 text-center '>
+              <p>
+                Merci de cliquer sur ce bouton avant de pouvoir envoyer votre
+                demande.
+              </p>
+            </div>
+          )}
+          <div className='mt-6 flex justify-center'>
+            <HCaptcha
+              sitekey='50b2fe65-b00b-4b9e-ad62-3ba471098be2'
+              onVerify={onHCaptchaChange}
+            />
+          </div>
+        </div>
       </form>
     </div>
   );
