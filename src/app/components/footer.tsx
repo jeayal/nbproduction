@@ -51,6 +51,7 @@ export default function Footer() {
               ></input>
               <button
                 type='submit'
+                aria-label="S'abonner à la newsletter"
                 className='flex w-fit items-center rounded-md bg-neutral-400 px-2 py-2 text-lg font-light text-gray-50 hover:bg-blue-400 dark:bg-neutral-700 dark:hover:bg-blue-500'
               >
                 <svg

@@ -48,13 +48,13 @@ export default function Testimonials() {
     <div className='py-14'>
       <div className='mx-auto max-w-screen-xl px-4 md:px-8'>
         <div className='mx-auto max-w-3xl text-center'>
-          <h3 className='mb-6 text-4xl font-bold md:text-6xl'>
+          <h1 className='mb-6 text-4xl font-bold md:text-6xl'>
             Les
             <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>
               &nbsp;avis&nbsp;
             </span>
             de mes clients
-          </h3>
+          </h1>
           <ul>
             {testimonials.map((item, idx) =>
               currentTestimonial == idx ? (
