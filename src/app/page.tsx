@@ -3,8 +3,10 @@
 import * as React from 'react';
 
 import BlockHomepage from '@/app/components/block';
-import CardRow from '@/app/components/card';
+import CardRowBig from '@/app/components/cardBig';
 import Socials from '@/app/components/socials';
+import Testimonials from '@/app/components/testimonials';
+import TrustedLogos from '@/app/components/trustedBy';
 // import VimeoVideos from '@/app/components/vimeoportfolio';
 import VideoCard from '@/app/components/videoCardv2';
 import Contact from '@/app/contactComponent';
@@ -36,7 +38,7 @@ export default function HomePage() {
           muted
           autoPlay
           playsInline
-          webkit-playsinline
+          webkit-playsinline='true'
           className='absolute z-10 min-h-full w-auto min-w-full max-w-none'
         >
           <source
@@ -58,10 +60,10 @@ export default function HomePage() {
           <h1 className='layout mb-10 px-4 text-4xl md:text-6xl'>
             Join the club.
           </h1>
-          <CardRow
+          <CardRowBig
             rowInverse={true}
             bgColor='bg-slate-100 dark:bg-neutral-800'
-            title="Bonjour, moi c'est Nicolas"
+            title='Une vidéo de qualité professionnelle à portée de main !'
             imgSrc='/images/nicolas-blanc-production.jpg'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
             innerText='La vidéo est l’un des moyens les plus efficaces pour
@@ -71,7 +73,26 @@ export default function HomePage() {
           vos événements marquants. Je vous propose donc de créer des
           vidéos qui correspondront à vos envies et vos besoins.'
           />
+
+          <CardRowBig
+            rowInverse={false}
+            stroke
+            bt
+            bgColor='bg-slate-100 dark:bg-neutral-800'
+            title='Découvrez comment faire grandir votre marque grâce à la vidéo.'
+            imgSrc='/images/video-professionnelle-nicolas-blanc.avif'
+            imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
+            innerText='La vidéo est l’un des moyens les plus efficaces pour
+          communiquer. Elle donne une image sérieuse et met en avant votre
+          entreprise pour vos clients actuels et futurs.
+          Cest également un excellent moyen pour garder un souvenir de
+          vos événements marquants. Je vous propose donc de créer des
+          vidéos qui correspondront à vos envies et vos besoins.'
+          />
         </div>
+      </section>
+      <section className='my-20'>
+        <TrustedLogos />
       </section>
       <section>
         <div
@@ -127,6 +148,9 @@ export default function HomePage() {
         />
       </section>
       {/* <VimeoVideos /> */}
+      <section>
+        <Testimonials />
+      </section>
 
       {/* CONTACT */}
 

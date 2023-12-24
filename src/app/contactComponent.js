@@ -126,6 +126,30 @@ export default function Contact() {
             <small>{errors.email.message}</small>
           </div>
         )}
+        <input
+          id='phone'
+          type='phone'
+          placeholder='Votre numéro de téléphone'
+          autoComplete='false'
+          className={`border-1  mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-600  ${
+            errors.phone
+              ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
+              : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
+          }`}
+          {...register('phone', {
+            required: 'Veuillez ajouter votre numéro de téléphone',
+            pattern: {
+              // value: /^\S+@\S+$/i, ORIGINAL
+              value: /^[0-9]{9}$/i,
+              message: "Votre numéro de téléphone n'a pas l'air valide.",
+            },
+          })}
+        />
+        {errors.phone && (
+          <div className='mt-1 text-red-600'>
+            <small>{errors.phone.message}</small>
+          </div>
+        )}
 
         {/* <label
           htmlFor='message'
@@ -147,7 +171,7 @@ export default function Contact() {
             required: 'Veuillez préciser votre besoin',
           })}
         >
-          <option disabled defaultValue='Quel est votre besoin ?' selected>
+          <option disabled defaultValue='DEFAULT'>
             Quel est votre besoin ?
           </option>
           <option value={siteConfig.services[0]}>
@@ -234,19 +258,23 @@ export default function Contact() {
         </div>
         <div className='my-4'>
           {!isHuman && (
-            <div className='mt-3 rounded-lg border-2 border-solid border-yellow-500 p-6 text-center '>
-              <p>
-                Merci de cliquer sur ce bouton avant de pouvoir envoyer votre
-                demande.
-              </p>
-            </div>
+            <>
+              <div className='mt-3 rounded-lg border-2 border-solid border-yellow-500 p-6 text-center '>
+                <p>
+                  Merci de cliquer sur ce bouton avant de pouvoir envoyer votre
+                  demande.
+                </p>
+              </div>
+
+              <div className='mt-6 flex justify-center'>
+                <HCaptcha
+                  sitekey='50b2fe65-b00b-4b9e-ad62-3ba471098be2'
+                  onVerify={onHCaptchaChange}
+                  render='explicit'
+                />
+              </div>
+            </>
           )}
-          <div className='mt-6 flex justify-center'>
-            <HCaptcha
-              sitekey='50b2fe65-b00b-4b9e-ad62-3ba471098be2'
-              onVerify={onHCaptchaChange}
-            />
-          </div>
         </div>
       </form>
     </div>
