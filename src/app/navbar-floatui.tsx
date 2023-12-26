@@ -247,7 +247,9 @@ export default function NavBarDropdown() {
             </div>
             <div
               className={` mt-8 flex-1 justify-end pb-3 md:mt-0 md:block md:pb-0 ${
-                state ? 'animate-flip-down animate-once block' : 'hidden'
+                state
+                  ? 'block'
+                  : 'hidden' /* // ! Animate here : animate-flip-down animate-once*/
               }`}
             >
               <ul className='items-center space-y-12 md:flex md:space-x-6 md:space-y-0'>
