@@ -18,7 +18,7 @@ export default function HomePage() {
       <header className='relative mb-12 flex h-screen items-center overflow-hidden'>
         <div className='layout relative z-[15] flex flex-row text-white md:flex-col'>
           <div className='md:w-3/4'>
-            <h1 className=' animate__animated animate__bounce animate-fade-up animate-once mb-4 text-balance text-[4em] leading-none md:text-[5em]'>
+            <h1 className=' md:animate__animated  md:animate-fade-up md:animate-once mb-4 text-balance text-[4em] leading-none md:text-[5em]'>
               Une
               <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>
                 &nbsp;vidéo&nbsp;
