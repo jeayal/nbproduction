@@ -1,6 +1,6 @@
 // Contact Component Web3Forms - Shortly Agency v1.2 2023
 
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+// import HCaptcha from '@hcaptcha/react-hcaptcha';
 import useWeb3Forms from '@web3forms/react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -17,19 +17,19 @@ export default function Contact() {
     reset,
     // watch,
     // control,
-    setValue,
+    // setValue,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
     mode: 'onTouched',
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
-  const [isHuman, setIsHuman] = useState(false);
+  // const [isHuman, setIsHuman] = useState(false);
 
-  const onHCaptchaChange = (token) => {
-    setValue('h-captcha-response', token);
-    setIsHuman(true);
-  };
+  // const onHCaptchaChange = (token) => {
+  //   setValue('h-captcha-response', token);
+  //   setIsHuman(true);
+  // };
   const apiKey =
     process.env.PUBLIC_ACCESS_KEY || 'd2358867-ff67-4856-bc87-c0c848359f2e';
 
@@ -211,8 +211,8 @@ export default function Contact() {
             <small>{errors.message.message}</small>
           </div>
         )}
-        {!isSubmitSuccessful && isHuman && (
-          <div className='flex flex-row items-center justify-start'>
+        {!isSubmitSuccessful && (
+          /* isHuman  && */ <div className='flex flex-row items-center justify-start'>
             <button
               type='submit'
               aria-label='Envoyer ma demande'
@@ -258,7 +258,7 @@ export default function Contact() {
             </div>
           )}
         </div>
-        <div className='my-4'>
+        {/* <div className='my-4'>
           {!isHuman && (
             <>
               <div className='mt-3 rounded-lg border-2 border-solid border-yellow-500 p-6 text-center '>
@@ -277,7 +277,7 @@ export default function Contact() {
               </div>
             </>
           )}
-        </div>
+        </div> */}
       </form>
     </div>
   );
