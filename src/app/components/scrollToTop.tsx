@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { BiArrowFromBottom } from 'react-icons/bi';
 
@@ -5,7 +7,7 @@ export const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
+    if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -28,12 +30,14 @@ export const ScrollToTop = () => {
   }, []);
 
   return (
-    <div className='hidden transition-all delay-150 duration-300 ease-in-out sm:flex'>
+    <div className='hidden  ease-in-out sm:flex'>
       <button
         type='button'
         onClick={scrollToTop}
         className={
-          isVisible ? 'text-neutral-400 dark:text-neutral-200' : 'hidden'
+          isVisible
+            ? 'animate-fade-up animate-duration-100 text-neutral-400 dark:text-neutral-200'
+            : 'hidden'
         }
       >
         <BiArrowFromBottom

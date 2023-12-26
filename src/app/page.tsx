@@ -7,7 +7,6 @@ import CardRowBig from '@/app/components/cardBig';
 import Socials from '@/app/components/socials';
 import Testimonials from '@/app/components/testimonials';
 import TrustedLogos from '@/app/components/trustedBy';
-// import VimeoVideos from '@/app/components/vimeoportfolio';
 import VideoCard from '@/app/components/videoCardv2';
 import Contact from '@/app/contactComponent';
 
@@ -15,19 +14,18 @@ import LabTabs from './components/tabs';
 
 export default function HomePage() {
   return (
-    <div className='transition-all ease-in-out '>
+    <div className=' transition-all ease-in-out'>
       <header className='relative mb-12 flex h-screen items-center overflow-hidden'>
         <div className='layout relative z-[15] flex flex-row text-white md:flex-col'>
           <div className='md:w-3/4'>
-            <h1 className='mb-4 text-[4em] leading-none md:text-[5em] '>
+            <h1 className=' animate__animated animate__bounce animate-fade-up animate-once mb-4 text-balance text-[4em] leading-none md:text-[5em]'>
               Une
               <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>
                 &nbsp;vidéo&nbsp;
               </span>
-              <br />
               pour sublimer votre image de marque.
             </h1>
-            <p className='text-[1.5em] leading-7'>
+            <p className='text-balance text-[1.5em] leading-7'>
               La vidéo est l’un des moyens les plus efficaces pour communiquer.
               N’attendez plus pour briller sur les réseaux sociaux !
             </p>
@@ -75,7 +73,6 @@ export default function HomePage() {
           <CardRowBig
             rowInverse={false}
             stroke
-            bt
             bgColor='bg-slate-100 dark:bg-neutral-800'
             title='Découvrez comment faire grandir votre marque grâce à la vidéo.'
             imgSrc='/images/video-professionnelle-nicolas-blanc.avif'
@@ -145,8 +142,8 @@ export default function HomePage() {
           }
         />
       </section>
-      {/* <VimeoVideos /> */}
-      <section>
+
+      <section className='my-16'>
         <Testimonials />
       </section>
 
@@ -164,7 +161,7 @@ export default function HomePage() {
             </span>
             !
           </h1>
-          <p className='mb-8 mt-4 text-sm font-normal md:mt-6'>
+          <p className='mb-8 mt-4 text-balance text-sm font-normal md:mt-6'>
             Remplissez ce petit formulaire pour connaitre vos besoins. Vous
             pouvez également me contacter sur les réseaux sociaux.
           </p>

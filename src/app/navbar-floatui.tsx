@@ -123,7 +123,7 @@ export default function NavBarDropdown() {
     <>
       <div className='fixed top-0 z-50 m-auto w-full overflow-hidden drop-shadow-lg '>
         <nav
-          className={`z-20 w-full bg-neutral-100  dark:bg-neutral-900 md:static md:border-none md:text-sm ${
+          className={`z-20 w-full bg-neutral-100  md:static md:border-none md:text-sm dark:bg-neutral-900 ${
             state ? 'rounded-b-xl shadow-lg md:shadow-none' : ''
           }`}
         >
@@ -247,7 +247,7 @@ export default function NavBarDropdown() {
             </div>
             <div
               className={` mt-8 flex-1 justify-end pb-3 md:mt-0 md:block md:pb-0 ${
-                state ? 'block' : 'hidden'
+                state ? 'animate-flip-down animate-once block' : 'hidden'
               }`}
             >
               <ul className='items-center space-y-12 md:flex md:space-x-6 md:space-y-0'>
@@ -298,51 +298,12 @@ export default function NavBarDropdown() {
                       ) : (
                         <a
                           href={item.path}
-                          className='block text-lg uppercase tracking-widest text-black hover:text-blue-500 dark:text-white dark:hover:text-blue-500 md:text-xs'
+                          className='block text-lg uppercase tracking-widest text-black hover:text-blue-500 md:text-xs dark:text-white dark:hover:text-blue-500'
                           onClick={() => setState(false)}
                         >
                           {item.title}
                         </a>
                       )}
-                      {/* {item.isDrapdown &&
-                      drapdownState.idx == idx &&
-                      drapdownState.isActive ? (
-                        <div className='inset-x-0 top-20 ml-3 mt-6 w-full  md:absolute md:mt-0 md:border-y md:shadow-md'>
-                          <ul className='mx-auto grid max-w-screen-xl items-center gap-6 md:grid-cols-2 md:p-8 lg:grid-cols-3'>
-                            {constItem?.navs.map((dropdownItem, idx) => (
-                              <li key={idx}>
-                                <p className='text-sm text-blue-600'>
-                                  {dropdownItem.label}
-                                </p>
-                                <ul className='mt-5 space-y-6'>
-                                  {dropdownItem.navs.map((navItem, idx) => (
-                                    <li key={idx} className='group'>
-                                      <a
-                                        href={navItem.path}
-                                        className='flex items-center gap-3'
-                                      >
-                                        <div className='flex h-12 w-12 items-center justify-center rounded-full bg-indigo-50 text-blue-500 duration-150 group-hover:bg-blue-600 group-hover:text-white md:h-14 md:w-14'>
-                                          {navItem.icon}
-                                        </div>
-                                        <div>
-                                          <span className='text-sm font-medium text-gray-800 duration-200 group-hover:text-blue-600 md:text-base'>
-                                            {navItem.title}
-                                          </span>
-                                          <p className='mt-1 text-sm text-gray-600 group-hover:text-gray-800'>
-                                            {navItem.desc}
-                                          </p>
-                                        </div>
-                                      </a>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ) : (
-                        ''
-                      )} */}
                     </li>
                   );
                 })}

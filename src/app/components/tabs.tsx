@@ -7,7 +7,7 @@ import * as React from 'react';
 
 import styles from './Tabs.module.css';
 
-import CardRow from '@/app/components/card';
+import CardRowBig from '@/app/components/cardBig';
 
 const categories = ['Mariage', 'Concerts', 'Publicité', 'Sport', 'Entreprise'];
 
@@ -100,7 +100,7 @@ export default function LabTabs() {
         {/* TAB 1 */}
 
         <TabPanel value='1' className={`${styles.slideIn}`}>
-          <CardRow
+          <CardRowBig
             title={categories[0]}
             videoSrcMp4='/videos/mariage.mp4'
             videoSrcWebm='/videos/mariage.webm'
@@ -117,7 +117,7 @@ export default function LabTabs() {
         {/* TAB 2 */}
 
         <TabPanel value='2' className={`${styles.slideIn}`}>
-          <CardRow
+          <CardRowBig
             rowInverse
             title={categories[1]}
             videoSrcMp4='/videos/concerts.mp4'
@@ -135,7 +135,7 @@ export default function LabTabs() {
         {/* TAB 3 */}
 
         <TabPanel value='3' className={`${styles.slideIn}`}>
-          <CardRow
+          <CardRowBig
             title={categories[2]}
             videoSrcMp4='/videos/publicite.mp4'
             videoSrcWebm='/videos/publicite.webm'
@@ -152,7 +152,7 @@ export default function LabTabs() {
         {/* TAB 4 */}
 
         <TabPanel value='4' className={`${styles.slideIn}`}>
-          <CardRow
+          <CardRowBig
             rowInverse
             title={categories[3]}
             videoSrcMp4='/videos/rallye.mp4'
@@ -170,7 +170,7 @@ export default function LabTabs() {
         {/* TAB 5 */}
 
         <TabPanel value='5' className={`${styles.slideIn}`}>
-          <CardRow
+          <CardRowBig
             rowInverse={false}
             title={categories[4]}
             videoSrcMp4='/videos/factory.mp4'

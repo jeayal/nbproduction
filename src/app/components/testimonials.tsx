@@ -7,22 +7,22 @@ export default function Testimonials() {
   const testimonials = [
     {
       avatar: 'https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg',
-      name: 'Martin escobar',
-      title: 'Founder of meta',
+      name: 'Hakim Boukovlov',
+      title: 'CEO @WoW-KEK',
       quote:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae, gravida justo. Nunc fermentum magna lorem, euismod volutpat arcu volutpat et.',
     },
     {
       avatar: 'https://randomuser.me/api/portraits/women/79.jpg',
-      name: 'Angela stian',
-      title: 'Product designer',
+      name: 'Rocco',
+      title: 'Agence Les Dix Yeux',
       quote:
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout, that the point of using Lorem Ipsum.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae, gravida justo.',
     },
     {
       avatar: 'https://randomuser.me/api/portraits/men/86.jpg',
-      name: 'Karim ahmed',
-      title: 'DevOp engineer',
+      name: 'Mitch',
+      title: 'Founder @Mardi à quelle heure ?',
       quote:
         'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati ',
     },
@@ -66,7 +66,7 @@ export default function Testimonials() {
                     <div className='mt-6'>
                       <Image
                         src='/images/logo-nbp.png'
-                        alt='Alt'
+                        alt='Client qui a donné son avis'
                         width={50}
                         height={50}
                         className='mx-auto'
@@ -76,7 +76,7 @@ export default function Testimonials() {
                         className='mx-auto h-16 w-16 rounded-full'
                       /> */}
                       <div className='mt-3'>
-                        <span className='block font-semibold text-gray-800'>
+                        <span className='block font-semibold '>
                           {item.name}
                         </span>
                         <span className='mt-0.5 block text-sm text-gray-600'>

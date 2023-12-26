@@ -13,7 +13,9 @@ export default {
         ],
       },
       fontFamily: {
-        primary: ['Josefin', ...defaultTheme.fontFamily.sans],
+        // primary: ['Ubuntu', ...defaultTheme.fontFamily.sans],
+        secondary: ['Inter', ...defaultTheme.fontFamily.sans],
+        primary: ['Ubuntu', 'sans-serif'],
       },
       colors: {
         primary: {
@@ -62,5 +64,5 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('tailwindcss-animated')],
 } satisfies Config;
