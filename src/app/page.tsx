@@ -25,7 +25,7 @@ export default function HomePage() {
               </span>
               pour sublimer votre image de marque.
             </h1>
-            <p className='text-balance text-[1.5em] leading-7'>
+            <p className='text-lg md:text-xl '>
               La vidéo est l’un des moyens les plus efficaces pour communiquer.
               N’attendez plus pour briller sur les réseaux sociaux !
             </p>
