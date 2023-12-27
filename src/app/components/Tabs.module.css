@@ -15,5 +15,5 @@
 }
 
 .tabsScroll {
-  @apply mr-6 flex cursor-pointer font-sans text-sm uppercase tracking-widest text-black dark:text-white md:text-2xl;
+  @apply mr-6 flex cursor-pointer font-sans text-sm uppercase tracking-widest text-black md:text-2xl dark:text-white;
 }

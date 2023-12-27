@@ -75,7 +75,7 @@ export default function CardRowBig({
               className='object-cover'
             >
               <source src={videoSrcWebm} type='video/webm' />
-              <source src={videoSrcMp4} type='video/mp4' />
+              {/* <source src={videoSrcMp4} type='video/mp4' /> */}
             </video>
           ) : (
             <Image

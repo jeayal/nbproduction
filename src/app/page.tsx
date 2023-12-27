@@ -43,10 +43,10 @@ export default function HomePage() {
             src='/videos/header-nicolas-blanc-production-video.webm'
             type='video/webm'
           />
-          <source
+          {/* <source
             src='/videos/header-nicolas-blanc-production-video.mp4'
             type='video/mp4'
-          />
+          /> */}
           Votre navigateur ne supporte pas l'utilisation de vidéo ici.
         </video>
       </header>
