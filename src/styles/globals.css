@@ -45,7 +45,7 @@
   @font-face {
     font-family: 'Ubuntu';
     font-style: bold;
-    src: url('/fonts/Ubuntu-Bold.ttf');
+    src: url('/fonts/Ubuntu-Bold.woff2');
     font-weight: 800;
     font-display: swap;
   }
@@ -53,7 +53,7 @@
   @font-face {
     font-family: 'Ubuntu';
     font-style: normal;
-    src: url('/fonts/Ubuntu-Regular.ttf');
+    src: url('/fonts/Ubuntu-Regular.woff2');
     font-weight: 400;
     font-display: swap;
   }
@@ -61,7 +61,7 @@
   @font-face {
     font-family: 'Ubuntu';
     font-style: light;
-    src: url('/fonts/Ubuntu-Light.ttf');
+    src: url('/fonts/Ubuntu-Light.woff2');
     font-weight: 100;
     font-display: swap;
   }
@@ -97,7 +97,7 @@
 
   body,
   .p {
-    @apply font-primary text-sm  tracking-tight md:text-base;
+    @apply font-primary text-sm tracking-tight md:text-base;
   }
   /* #endregion  /**======== Typography =========== */
 
