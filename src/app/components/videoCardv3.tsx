@@ -17,7 +17,7 @@ export default function VideoCard({ src, title, txt, alt, url }: any) {
 
   return (
     <>
-      <a
+      <div
         onClick={handleOpen}
         className='hover:drop-shadow-glow group cursor-pointer'
       >
@@ -54,7 +54,7 @@ export default function VideoCard({ src, title, txt, alt, url }: any) {
             </p>
           </div>
         </div>
-      </a>
+      </div>
 
       <Modal
         aria-labelledby={title}
