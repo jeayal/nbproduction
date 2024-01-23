@@ -101,7 +101,7 @@ export default function LabTabs() {
 
         <TabPanel value='1' className={`${styles.slideIn}`}>
           <CardRowBig
-            title={categories[0]}
+            title='Immortalisez votre mariage en haute-qualité'
             videoSrcMp4='/videos/mariage.mp4'
             videoSrcWebm='/videos/mariage.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
@@ -119,7 +119,7 @@ export default function LabTabs() {
         <TabPanel value='2' className={`${styles.slideIn}`}>
           <CardRowBig
             rowInverse
-            title={categories[1]}
+            title='Un souvenir de votre évènement'
             videoSrcMp4='/videos/concerts.mp4'
             videoSrcWebm='/videos/concerts.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
@@ -136,7 +136,7 @@ export default function LabTabs() {
 
         <TabPanel value='3' className={`${styles.slideIn}`}>
           <CardRowBig
-            title={categories[2]}
+            title='Une publicité pour votre produit phare'
             videoSrcMp4='/videos/publicite.mp4'
             videoSrcWebm='/videos/publicite.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
@@ -154,7 +154,7 @@ export default function LabTabs() {
         <TabPanel value='4' className={`${styles.slideIn}`}>
           <CardRowBig
             rowInverse
-            title={categories[3]}
+            title='Une couverture de votre évènement sportif'
             videoSrcMp4='/videos/rallye.mp4'
             videoSrcWebm='/videos/rallye.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
@@ -172,7 +172,7 @@ export default function LabTabs() {
         <TabPanel value='5' className={`${styles.slideIn}`}>
           <CardRowBig
             rowInverse={false}
-            title={categories[4]}
+            title='Une vidéo de qualité professionnelle pour votre entreprise'
             videoSrcMp4='/videos/factory.mp4'
             videoSrcWebm='/videos/factory.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'

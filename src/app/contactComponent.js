@@ -1,6 +1,6 @@
 // Contact Component Web3Forms - Shortly Agency v1.2 2023
 
-// import HCaptcha from '@hcaptcha/react-hcaptcha';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import useWeb3Forms from '@web3forms/react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -10,26 +10,26 @@ import styles from './contactForm.module.css';
 import { siteConfig } from '@/constant/config';
 
 export default function Contact() {
-  const customMail = 'contact@blanc-nicolas.com';
+  // const customMail = 'contact@blanc-nicolas.com';
   const {
     register,
     handleSubmit,
     reset,
     // watch,
     // control,
-    // setValue,
+    setValue,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
     mode: 'onTouched',
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
-  // const [isHuman, setIsHuman] = useState(false);
+  const [isHuman, setIsHuman] = useState(false);
 
-  // const onHCaptchaChange = (token) => {
-  //   setValue('h-captcha-response', token);
-  //   setIsHuman(true);
-  // };
+  const onHCaptchaChange = (token) => {
+    setValue('h-captcha-response', token);
+    setIsHuman(true);
+  };
   const apiKey =
     process.env.PUBLIC_ACCESS_KEY || 'd2358867-ff67-4856-bc87-c0c848359f2e';
 
@@ -65,16 +65,8 @@ export default function Contact() {
           style={{ display: 'none' }}
           {...register('botcheck')}
         ></input>
-        <h1 className='text-2xl font-bold dark:text-gray-50'>
-          Demande de devis
-        </h1>
+        <h1 className='mb-4 text-4xl'>Demande de devis</h1>
 
-        {/* <label
-          htmlFor='fullname'
-          className='mt-8 font-light text-gray-500 dark:text-gray-50'
-        >
-          Votre nom<span className='text-red-500'>*</span>
-        </label> */}
         <input
           type='text'
           placeholder='Votre nom'
@@ -94,13 +86,7 @@ export default function Contact() {
             <small>{errors.name.message}</small>
           </div>
         )}
-        {/* 
-        <label
-          htmlFor='email'
-          className='mt-4 font-light text-gray-500 dark:text-gray-50'
-        >
-          Votre e-mail<span className='text-red-500'>*</span>
-        </label> */}
+
         <input
           id='email_address'
           type='email'
@@ -129,6 +115,7 @@ export default function Contact() {
         <input
           id='phone'
           type='phone'
+          name='phone'
           placeholder='Votre numéro de téléphone'
           autoComplete='false'
           className={`border-1  mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-600  ${
@@ -151,13 +138,6 @@ export default function Contact() {
           </div>
         )}
 
-        {/* <label
-          htmlFor='message'
-          className='mt-4 font-light text-gray-500 dark:text-gray-50'
-        >
-          Votre demande<span className='text-red-500'>*</span>
-        </label> */}
-
         <select
           name='BesoinChoix'
           id='needChoice'
@@ -172,7 +152,7 @@ export default function Contact() {
             required: 'Veuillez préciser votre besoin',
           })}
         >
-          <option disabled defaultValue='DEFAULT'>
+          <option disabled defaultValue='DEFAULT' selected>
             Quel est votre besoin ?
           </option>
           <option value={siteConfig.services[0]}>
@@ -211,8 +191,8 @@ export default function Contact() {
             <small>{errors.message.message}</small>
           </div>
         )}
-        {!isSubmitSuccessful && (
-          /* isHuman  && */ <div className='flex flex-row items-center justify-start'>
+        {!isSubmitSuccessful && isHuman && (
+          <div className='flex flex-row items-center justify-start'>
             <button
               type='submit'
               aria-label='Envoyer ma demande'
@@ -253,31 +233,21 @@ export default function Contact() {
           )}
           {isSubmitSuccessful && !isSuccess && (
             <div className='mt-3 rounded-lg border-2 border-solid border-red-500 p-6 text-center'>
-              {message &&
-                `Une erreur est survenue. Si le problème persiste, contactez-moi à ${customMail}`}
+              {message && `Une erreur est survenue. Veuillez réessayer.`}
             </div>
           )}
         </div>
-        {/* <div className='my-4'>
+        <div className='my-4'>
           {!isHuman && (
-            <>
-              <div className='mt-3 rounded-lg border-2 border-solid border-yellow-500 p-6 text-center '>
-                <p>
-                  Merci de cliquer sur ce bouton avant de pouvoir envoyer votre
-                  demande.
-                </p>
-              </div>
-
-              <div className='mt-6 flex justify-center'>
-                <HCaptcha
-                  sitekey='50b2fe65-b00b-4b9e-ad62-3ba471098be2'
-                  onVerify={onHCaptchaChange}
-                  render='explicit'
-                />
-              </div>
-            </>
+            <div className='mt-6 flex justify-center'>
+              <HCaptcha
+                sitekey='50b2fe65-b00b-4b9e-ad62-3ba471098be2'
+                onVerify={onHCaptchaChange}
+                render='explicit'
+              />
+            </div>
           )}
-        </div> */}
+        </div>
       </form>
     </div>
   );

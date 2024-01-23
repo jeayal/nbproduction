@@ -5,19 +5,6 @@ import Fade from '@mui/material/Fade';
 import Modal from '@mui/material/Modal';
 import * as React from 'react';
 
-// const style = {
-//   position: 'absolute' as const,
-//   top: '50%',
-//   left: '50%',
-//   transform: 'translate(-50%, -50%)',
-//   width: '70rem',
-//   bgcolor: 'background.paper',
-//   border: '2px solid #000',
-//   boxShadow: 24,
-//   p: 4,
-//   borderRadius: '15px',
-// };
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function TransitionsModal({ url, title }: any) {
   const [open, setOpen] = React.useState(false);
@@ -45,12 +32,11 @@ export default function TransitionsModal({ url, title }: any) {
             <div className='layout relative mx-auto flex flex-col rounded-xl bg-neutral-800 p-8 drop-shadow-lg'>
               <div className='mb-6 flex flex-row justify-between '>
                 <h1 className='text-2xl'>{title}</h1>
-                <button onClick={handleClose}>Close</button>
+                <button onClick={handleClose}>Fermer</button>
               </div>
               <div className='layout relative flex h-full w-full overflow-hidden rounded-lg object-fill'>
                 <iframe
                   src={url}
-                  // src='https://player.vimeo.com/video/870214438?h=4be2a58690&autoplay=1&title=0&byline=0&portrait=0'
                   className=' h-full w-full '
                   allow='autoplay; fullscreen; picture-in-picture'
                 ></iframe>

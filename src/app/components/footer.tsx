@@ -6,10 +6,10 @@ import Socials from '@/app/components/socials';
 
 export default function Footer() {
   return (
-    <div className='bg-neutral-100 dark:bg-neutral-800'>
-      <div className='layout relative flex flex-col justify-between pt-10 md:flex-row md:py-16'>
+    <div className='bg-neutral-100 dark:bg-neutral-950'>
+      <div className='layout relative flex flex-col justify-between pt-10 md:flex-row md:py-32'>
         <div id='gauche' className='relative flex flex-col md:mr-0'>
-          <div className=' relative mx-auto flex items-center justify-center overflow-hidden rounded-xl bg-neutral-950 object-contain p-4 align-middle text-white drop-shadow-lg dark:bg-neutral-200 dark:text-black md:p-8'>
+          <div className=' relative mx-auto flex items-center justify-center overflow-hidden rounded-xl bg-neutral-950 object-contain p-4 align-middle text-white drop-shadow-lg md:p-8 dark:bg-neutral-200 dark:text-black'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='100'
@@ -35,7 +35,7 @@ export default function Footer() {
           <form className='mb-10 flex w-full flex-col md:mb-0'>
             <label
               htmlFor='subscribe'
-              className='mb-2 pb-2 text-xs font-bold uppercase tracking-[0.3em] text-gray-500 dark:text-gray-400 md:text-sm'
+              className='mb-2 pb-2 text-xs font-bold uppercase tracking-[0.3em] text-gray-500 md:text-sm dark:text-gray-400'
             >
               Abonnez-vous à ma
               <span className='bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent'>

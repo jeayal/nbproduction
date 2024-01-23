@@ -72,32 +72,36 @@
 
   /* #region  /**=========== Typography =========== */
   .h0 {
-    @apply font-primary text-3xl font-bold tracking-tighter md:text-5xl;
+    @apply font-primary text-balance text-3xl font-bold tracking-tight md:text-5xl;
   }
 
   h1,
   .h1 {
-    @apply font-primary text-2xl font-bold tracking-tighter md:text-4xl;
+    @apply font-primary text-balance text-4xl font-bold tracking-tight md:text-5xl;
   }
 
   h2,
   .h2 {
-    @apply font-primary text-xl font-bold tracking-tighter md:text-3xl;
+    @apply font-primary text-balance text-xl font-bold tracking-tight md:text-3xl;
   }
 
   h3,
   .h3 {
-    @apply font-primary text-lg font-bold tracking-tighter md:text-2xl;
+    @apply font-primary text-balance text-lg font-bold tracking-tight md:text-2xl;
   }
 
   h4,
   .h4 {
-    @apply font-primary text-base font-bold tracking-tighter md:text-lg;
+    @apply font-primary text-balance text-base font-bold tracking-tight md:text-lg;
   }
 
   body,
   .p {
-    @apply font-primary text-sm tracking-tight md:text-base;
+    @apply font-primary text-balance text-sm tracking-normal md:text-lg;
+  }
+
+  .gradText {
+    @apply bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent;
   }
   /* #endregion  /**======== Typography =========== */
 
