@@ -1,4 +1,5 @@
 // Contact Component Web3Forms - Shortly Agency v1.2 2023
+'use client';
 
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import useWeb3Forms from '@web3forms/react';

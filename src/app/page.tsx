@@ -1,10 +1,5 @@
-'use client';
-
-import AOS from 'aos';
 import Image from 'next/image';
 import * as React from 'react';
-
-import 'aos/dist/aos.css';
 
 import Button from '@/app/components/button';
 import CardService from '@/app/components/card';
@@ -18,7 +13,6 @@ import Contact from '@/app/contactComponent';
 import LabTabs from './components/tabs';
 
 export default function HomePage() {
-  AOS.init();
   return (
     <div>
       <header className='relative flex h-screen items-center overflow-hidden'>

@@ -1,3 +1,5 @@
+'use client';
+
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
@@ -21,7 +23,7 @@ const styleTab = {
   fontSize: { xs: '1em', md: '1.3em', lg: '1.5em' },
   textTransform: 'uppercase',
   letterSpacing: '0.2em',
-  color: 'var(--tw-text-opactiy)', // !important Compatibilité Dark Mode ici
+  color: 'var(--tw-text-opactiy)',
   justifyContent: 'space-between',
 };
 
