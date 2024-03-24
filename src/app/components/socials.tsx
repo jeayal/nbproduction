@@ -5,10 +5,10 @@ const social = {
   size: '32px',
   margin: 'mr-6',
   lk: 'https://www.linkedin.com/profile',
-  ig: 'https://www.linkedin.com/profile',
+  ig: 'https://www.instagram.com/nblancproduction/',
   tw: 'https://www.linkedin.com/profile',
-  fb: 'https://www.linkedin.com/profile',
-  vi: 'https://www.linkedin.com/profile',
+  fb: 'https://www.facebook.com/NBlancProduction',
+  vi: 'https://vimeo.com/blancnicolas',
   yt: 'https://www.linkedin.com/profile',
   tk: 'https://www.linkedin.com/profile',
 };

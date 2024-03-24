@@ -8,30 +8,29 @@ import styles from './Tabs.module.css';
 export default function Testimonials() {
   const testimonials = [
     {
-      avatar: '/images/avis/client-01.jpg',
-      name: 'Hakim Boukovlov',
-      title: 'CEO @WoW-KEK',
-      picture: '/images/avis/avis-02.jpg',
+      // avatar: '/images/avis/client-01.jpg',
+      name: 'Kévin',
+      title: 'Pilote de rallye ',
+      picture: '/images/avis/avis-nicolas-blanc-video-01.jpg',
       quote:
-        "J'ai adoré travailler avec Nicolas, des super vidéos et un rendu exceptionnel ! Je le recontacterai rapidemenet",
+        "Images et montages vidéos de qualité. A l'écoute de nos attentes. Je recommande vivement !",
     },
     {
-      avatar: '/images/avis/client-02.jpg',
-      name: 'Rocco',
-      title: 'Agence Les Dix Yeux',
-      picture: '/images/avis/avis-02.jpg',
-
+      // avatar: '/images/avis/client-02.jpg',
+      name: 'Mathieu',
+      title: 'Président de C2P Projects',
+      picture: '/images/avis/avis-nicolas-blanc-video-02.jpg',
       quote:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae, gravida justo.',
+        'Services très qualitatif ! Nicolas s’adapte à nos besoins sans dénigrer la qualité de service !',
     },
     {
-      avatar: '/images/avis/client-03.jpg',
-      name: 'Mitch',
-      title: 'Founder @Mardi à quelle heure ?',
-      picture: '/images/avis/avis-03.jpg',
+      //  avatar: '/images/avis/client-03.jpg',
+      name: 'Maylis',
+      title: 'Mariage été 2023',
+      picture: '/images/avis/avis-nicolas-blanc-video-03.jpg',
 
       quote:
-        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati ',
+        'Clip et film de notre mariage juste extra. Très discret, compétent, et pro. Des images exceptionnelles et de qualité. Je recommande à 200% ',
     },
   ];
 
@@ -87,13 +86,13 @@ export default function Testimonials() {
                           “{item.quote}“
                         </p>
                         <div className=' flex flex-row items-start gap-6'>
-                          <Image
+                          {/* <Image
                             src={item.avatar}
                             alt='Client qui a donné son avis'
                             width={64}
                             height={64}
                             className=' rounded-full object-cover'
-                          />
+                          /> */}
 
                           <div className='flex flex-col items-start justify-center'>
                             <p className='text-2xl font-bold'>{item.name}</p>

@@ -4,10 +4,10 @@ export default function TrustedLogos() {
   const marquesItems = {
     marque: ['Peugeot', 'Truc', 'Muche'],
     logo: [
-      '/images/marques/peugeot.svg',
-      '/images/marques/renault.svg',
+      '/images/marques/UMS-logotype.svg',
+      '/images/marques/Michelin-Logo.svg',
       '/images/marques/ford.svg',
-      '/images/marques/pubg.svg',
+      '/images/marques/BZ-Consult-logo-2019.svg',
     ],
   };
   const subTitle =
@@ -95,8 +95,8 @@ export default function TrustedLogos() {
             <Image
               src={marquesItems.logo[3]}
               alt='Alt'
-              width={100}
-              height={100}
+              width={150}
+              height={150}
               className='my-auto '
             />
           </li>

@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='fr'>
-      <body>
+    <html lang='fr' className='min-h-full'>
+      <body className='h-full'>
         <Provider>
           <ScrollTheme />
           <NavBar />

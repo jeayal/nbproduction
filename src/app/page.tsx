@@ -139,14 +139,18 @@ export default function HomePage() {
                 <div data-aos='fade-up'>
                   <CardService
                     title='Tournage'
-                    txt="Je me déplace dans toute la France et à l'étranger pour réaliser vos vidéos sur-mesure. Equipé d'un GH4, d'un stabilisateur et de multiples optiques, je m'adapte à toutes les situations"
+                    txt="Réalisez une expérience visuelle extraordinaire avec mes services de tournage. Doté d'une vision
+                    artistique distinctive, je capture et magnifie chaque instant, partout dans le monde. Transformez vos
+                    idées en une réalité visuelle mémorable."
                     url='/#contact'
                   />
                 </div>
                 <div data-aos='fade-up' data-aos-delay='50'>
                   <CardService
                     title='Montage'
-                    txt="Je me déplace dans toute la France et à l'étranger pour réaliser vos vidéos sur-mesure. Equipé d'un GH4, d'un stabilisateur et de multiples optiques, je m'adapte à toutes les situations"
+                    txt='Transformez vos moments en souvenirs inoubliables avec mes services de montage vidéo. Expert en
+                    post-production, je sublime chaque séquence, ajoutant une touche artistique pour créer des vidéos
+                    exceptionnelles et personnalisées.'
                     url='/#contact'
                   />
                 </div>
@@ -154,7 +158,9 @@ export default function HomePage() {
                 <div data-aos='fade-up' data-aos-delay='100'>
                   <CardService
                     title='Réalisation'
-                    txt="Je me déplace dans toute la France et à l'étranger pour réaliser vos vidéos sur-mesure. Equipé d'un GH4, d'un stabilisateur et de multiples optiques, je m'adapte à toutes les situations"
+                    txt="Concrétisez votre vision avec mes services de réalisation. Du concept à l'écran, je donne vie à vos idées,
+                    apportant créativité et expertise. Chaque projet devient une expérience visuelle immersive et
+                    mémorable."
                     url='/#contact'
                   />
                 </div>
@@ -250,7 +256,7 @@ export default function HomePage() {
             Remplissez ce petit formulaire pour connaitre vos besoins. Vous
             pouvez également me contacter sur les réseaux sociaux.
           </p>
-          <Socials yt tw vi fb lk ig size='24px' />
+          <Socials vi fb ig size='24px' />
         </div>
         <div
           data-aos='fade-up'

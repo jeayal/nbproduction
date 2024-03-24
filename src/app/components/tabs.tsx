@@ -11,7 +11,7 @@ import styles from './Tabs.module.css';
 
 import CardRowBig from '@/app/components/cardBig';
 
-const categories = ['Mariage', 'Concerts', 'Publicité', 'Sport', 'Entreprise'];
+const categories = ['Mariage', 'Évènement', 'Publicité', 'Sport', 'Entreprise'];
 
 const styleTab = {
   // all: 'initial',
@@ -104,15 +104,13 @@ export default function LabTabs() {
         <TabPanel value='1' className={`${styles.slideIn}`}>
           <CardRowBig
             title='Immortalisez votre mariage en haute-qualité'
-            videoSrcMp4='/videos/mariage.mp4'
-            videoSrcWebm='/videos/mariage.webm'
+            videoSrcMp4='/videos/mariage-nicolas-blanc-video.mp4'
+            videoSrcWebm='/videos/mariage-nicolas-blanc-video.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
-            innerText='La vidéo est l’un des moyens les plus efficaces pour
-          communiquer. Elle donne une image sérieuse et met en avant votre
-          entreprise pour vos clients actuels et futurs.
-          Cest également un excellent moyen pour garder un souvenir de
-          vos événements marquants. Je vous propose donc de créer des
-          vidéos qui correspondront à vos envies et vos besoins.'
+            innerText="Capturez les instants magiques de votre mariage. Au-delà des photos, la vidéo immortalise les regards
+            complices, les rires et les voeux émouvants. Revivez ces moments intenses à chaque visionnage, créant
+            des souvenirs vivants. Optez pour une vidéo de mariage et préservez l'authenticité du plus beau jour de
+            votre vie."
           />
         </TabPanel>
 
@@ -125,12 +123,9 @@ export default function LabTabs() {
             videoSrcMp4='/videos/concerts.mp4'
             videoSrcWebm='/videos/concerts.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
-            innerText='La vidéo est l’un des moyens les plus efficaces pour
-          communiquer. Elle donne une image sérieuse et met en avant votre
-          entreprise pour vos clients actuels et futurs.
-          Cest également un excellent moyen pour garder un souvenir de
-          vos événements marquants. Je vous propose donc de créer des
-          vidéos qui correspondront à vos envies et vos besoins.'
+            innerText="Explorez l'extraordinaire avec une vidéo capturant l'effervescence des concerts, l'ambiance des salons et
+            l'exaltation de n’importe quel évènement. Optez pour une vidéo d'événement pour immortaliser
+            partager l'excitation inoubliable de ces moments uniques."
           />
         </TabPanel>
 
@@ -138,16 +133,14 @@ export default function LabTabs() {
 
         <TabPanel value='3' className={`${styles.slideIn}`}>
           <CardRowBig
+            rowInverse={false}
             title='Une publicité pour votre produit phare'
-            videoSrcMp4='/videos/publicite.mp4'
-            videoSrcWebm='/videos/publicite.webm'
+            videoSrcMp4='/videos/publicite-nicolas-blanc-video.mp4'
+            videoSrcWebm='/videos/publicite-nicolas-blanc-video.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
-            innerText='La vidéo est l’un des moyens les plus efficaces pour
-          communiquer. Elle donne une image sérieuse et met en avant votre
-          entreprise pour vos clients actuels et futurs.
-          Cest également un excellent moyen pour garder un souvenir de
-          vos événements marquants. Je vous propose donc de créer des
-          vidéos qui correspondront à vos envies et vos besoins.'
+            innerText="Alliant créativité et stratégie, ces productions révèlent l'essence de votre marque, mettant en lumière
+            vos produits ou vos services de manière inoubliable. Optez pour une vidéo publicitaire pour un impact
+            immédiat et une connexion durable avec votre audience."
           />
         </TabPanel>
 
@@ -157,15 +150,13 @@ export default function LabTabs() {
           <CardRowBig
             rowInverse
             title='Une couverture de votre évènement sportif'
-            videoSrcMp4='/videos/rallye.mp4'
-            videoSrcWebm='/videos/rallye.webm'
+            videoSrcMp4='/videos/sport-nicolas-blanc-video.mp4'
+            videoSrcWebm='/videos/sport-nicolas-blanc-video.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
-            innerText='La vidéo est l’un des moyens les plus efficaces pour
-          communiquer. Elle donne une image sérieuse et met en avant votre
-          entreprise pour vos clients actuels et futurs.
-          Cest également un excellent moyen pour garder un souvenir de
-          vos événements marquants. Je vous propose donc de créer des
-          vidéos qui correspondront à vos envies et vos besoins.'
+            innerText="Plongez dans l'action avec une vidéo époustouflante, capturant l'intensité des compétitions, la passion
+            des athlètes et l'excitation pure du jeu. Revivez chaque moment palpitant avec des souvenirs
+            dynamiques qui feront dire 'Woah, c'était incroyable !'.
+            Optez pour une vidéo de sport pour immortaliser l'énergie éclatante de vos performances."
           />
         </TabPanel>
 
@@ -175,15 +166,13 @@ export default function LabTabs() {
           <CardRowBig
             rowInverse={false}
             title='Une vidéo de qualité professionnelle pour votre entreprise'
-            videoSrcMp4='/videos/factory.mp4'
-            videoSrcWebm='/videos/factory.webm'
+            videoSrcMp4='/videos/entreprise-nicolas-blanc-video.mp4'
+            videoSrcWebm='/videos/entreprise-nicolas-blanc-video.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
-            innerText='La vidéo est l’un des moyens les plus efficaces pour
-          communiquer. Elle donne une image sérieuse et met en avant votre
-          entreprise pour vos clients actuels et futurs.
-          Cest également un excellent moyen pour garder un souvenir de
-          vos événements marquants. Je vous propose donc de créer des
-          vidéos qui correspondront à vos envies et vos besoins.'
+            innerText="Plongez dans le monde professionnel avec des vidéos d'entreprise captivantes ! Allant au-delà des
+            simples images, elles reflètent la dynamique de vos opérations, la culture de votre entreprise et
+            l'innovation au coeur de vos activités. Optez pour une vidéo d'entreprise pour partager l'essence
+            authentique et l'impact mémorable de votre organisation."
           />
         </TabPanel>
       </TabContext>

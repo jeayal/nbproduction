@@ -68,7 +68,7 @@ export default function Footer() {
               </button>
             </div>
           </form>
-          <Socials tk lk ig tw fb vi size='16px' faded />
+          <Socials ig fb vi size='16px' faded />
         </div>
         <div className=' flex flex-row flex-wrap justify-center gap-2 pb-10 text-center text-neutral-500 md:flex-col md:items-end md:justify-end md:pb-0'>
           <p>Mentions légales.</p>
