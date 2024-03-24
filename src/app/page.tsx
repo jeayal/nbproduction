@@ -17,7 +17,7 @@ export default function HomePage() {
     <div>
       <header className='relative flex h-screen items-center overflow-hidden'>
         <div data-aos='fade-up' className='layout z-20 flex  flex-col gap-4 '>
-          <h1 className='mb-4 text-balance text-6xl text-white lg:text-[4.5dvw] lg:leading-none'>
+          <h1 className='mb-4 text-balance text-5xl text-white lg:text-[4.5dvw] lg:leading-none'>
             Une
             <span className='gradText'>&nbsp;vidéo&nbsp;</span>
             pour sublimer votre image de marque.
