@@ -70,7 +70,7 @@ export default function HomePage() {
           </div>
           <div className='layout my-10 flex flex-col gap-10 text-left md:my-24 md:flex-row'>
             <Image
-              src='/images/timeline-01.jpg'
+              src='/images/nicolas-blanc-production-video-realisation-montage.jpg'
               width={450}
               height={450}
               alt='Découvrez comment faire grandir votre marque grâce à la vidéo.'
@@ -93,18 +93,18 @@ export default function HomePage() {
                 <Button
                   url='/#'
                   txt='Contactez-moi'
-                  aria='Pouet'
+                  aria='Contactez-moi'
                   primary={false}
                 />
                 <Button
                   url='/#'
                   txt='Réaliser un devis'
-                  aria='Pouet'
+                  aria='Réaliser un devis'
                   primary={true}
                 />
               </div>
               <Image
-                src='/images/video-01.jpg'
+                src='/images/nicolas-blanc-production-video-france.jpg'
                 width={450}
                 height={450}
                 alt='Découvrez comment faire grandir votre marque grâce à la vidéo.'
