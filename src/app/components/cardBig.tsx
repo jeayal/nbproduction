@@ -32,24 +32,24 @@ export default function CardRowBig({
         } `}
       >
         <div className='relative flex flex-col justify-center gap-6 p-8 text-left md:w-full md:p-12'>
-          <h1 id='title' className='  text-4xl '>
+          <h1 id='title' className='text-5xl'>
             {title}
           </h1>
-          <p id='text' className=' text-balance'>
+          <p id='text' className='text-balance'>
             {innerText}
           </p>
 
           <div className='flex w-full flex-col gap-6 md:flex-row'>
             <Button
               url='/contact'
-              txt='Faire un devis'
+              txt='Je fais un devis'
               aria='Faire un devis'
               primary={true}
             />
           </div>
         </div>
 
-        <div className=' flex'>
+        <div className='flex size-full items-center justify-end'>
           {videoSrcMp4 || videoSrcWebm ? (
             <video
               loop
@@ -65,8 +65,8 @@ export default function CardRowBig({
           ) : (
             <Image
               src={imgSrc}
-              width={450}
-              height={450}
+              width={650}
+              height={650}
               alt={imgAlt}
               className='object-cover'
             />

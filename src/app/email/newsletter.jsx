@@ -14,9 +14,7 @@ import {
 } from '@react-email/components';
 import * as React from 'react';
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : 'http://nbproduction.vercel.app';
+const baseUrl = process.env.BASE_URL;
 
 export const NewsletterCustomer = () => {
   const sendDate = new Date();

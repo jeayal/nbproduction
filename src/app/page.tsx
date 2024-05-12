@@ -61,11 +61,30 @@ export default function HomePage() {
             <CardRowBig
               rowInverse={true}
               bgColor='bg-slate-100 dark:bg-neutral-800'
-              title='Une vidéo de qualité professionnelle à portée de main !'
+              title={
+                <>
+                  Une vidéo de{' '}
+                  <span className='gradText'>qualité professionnelle</span> à
+                  portée de main !
+                </>
+              }
               imgSrc='/images/nicolas-blanc-production.jpg'
               imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
-              innerText='La vidéo est l’un des moyens les plus efficaces pour communiquer sur les réseaux sociaux. En tant qu’expert de votre secteur, et que vous soyez basé à Lyon, Chambéry, ou Annecy, vous comprenez l’importance de cibler votre audience locale en Savoie, Haute-Savoie et dans le Rhône. N’attendez plus pour briller en mettant en œuvre une stratégie vidéo optimisée pour votre région !
-'
+              innerText={
+                <div>
+                  <p>
+                    La <strong>vidéo</strong> est l’un des moyens les plus
+                    efficaces pour communiquer sur les réseaux sociaux.
+                  </p>
+                  <p className='mt-4'>
+                    Que vous soyez basé à{' '}
+                    <strong>Lyon, Chambéry, ou Annecy</strong>, n’attendez plus
+                    pour briller en mettant en œuvre une{' '}
+                    <strong>stratégie vidéo optimisée</strong> pour votre région
+                    !
+                  </p>
+                </div>
+              }
             />
           </div>
           <div className='layout my-10 flex flex-col gap-10 text-left md:my-24 md:flex-row'>
