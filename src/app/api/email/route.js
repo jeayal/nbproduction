@@ -1,13 +1,8 @@
 /* eslint-disable no-console */
-import { render } from '@react-email/render';
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-import { siteConfig } from '@/constant/config';
-
-import { EmailCustomer } from '../../email/customer';
-
-const adminMail = process.env.GMAIL_FROM;
+// const adminMail = process.env.GMAIL_FROM;
 
 export async function POST(request) {
   const data = await request.formData();
@@ -31,24 +26,24 @@ export async function POST(request) {
     },
   });
 
-  const emailHtml = render(
-    <EmailCustomer
-      url={siteConfig.url}
-      name={name}
-      phone={phone}
-      email={email}
-      service={service}
-      message={message}
-    />,
-    {
-      pretty: true,
-    }
-  );
-  console.log('Email HTML:', emailHtml);
+  // const emailHtml = render(
+  //   <EmailCustomer
+  //     url={siteConfig.url}
+  //     name={name}
+  //     phone={phone}
+  //     email={email}
+  //     service={service}
+  //     message={message}
+  //   />,
+  //   {
+  //     pretty: true,
+  //   }
+  // );
+  // console.log('Email HTML:', emailHtml);
 
   const admin = {
     from: 'contact@gregoryperson.com',
-    to: `${adminMail}`,
+    to: `contact@blanc-nicolas.com`,
     subject: `Nouveau message de ${name}`,
     text: JSON.stringify(message),
     html: `
