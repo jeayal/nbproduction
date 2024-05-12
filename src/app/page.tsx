@@ -64,9 +64,7 @@ export default function HomePage() {
               title='Une vidéo de qualité professionnelle à portée de main !'
               imgSrc='/images/nicolas-blanc-production.jpg'
               imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
-              innerText='La vidéo est l’un des moyens les plus efficaces pour
-          communiquer. Elle donne une image sérieuse et met en avant votre
-          entreprise pour vos clients actuels et futurs.
+              innerText='La vidéo est l’un des moyens les plus efficaces pour communiquer sur les réseaux sociaux. En tant qu’expert de votre secteur, et que vous soyez basé à Lyon, Chambéry, ou Annecy, vous comprenez l’importance de cibler votre audience locale en Savoie, Haute-Savoie et dans le Rhône. N’attendez plus pour briller en mettant en œuvre une stratégie vidéo optimisée pour votre région !
 '
             />
           </div>
@@ -277,6 +275,23 @@ export default function HomePage() {
             height={500}
             className='overflow-hidden rounded-xl'
           />
+        </div>
+      </section>
+      <section className='layout my-10 border-t-[1px] border-solid border-neutral-500 pt-10 md:my-24'>
+        <div className='m-auto space-y-2 text-balance text-center text-neutral-400'>
+          <p>
+            Réalisation et création de <strong>vidéos professionnelles</strong>{' '}
+            en Savoie (73). Production de contenus visuels et montages vidéos
+            pour tous vos besoins (vidéo de mariage, publicité, VTT,
+            compétitions sportives, concerts...)
+          </p>
+          <p>
+            Possibilité de se déplacer à Genève, Annecy, Lyon, Chambéry,
+            Bourg-en-Bresse, partout en France et en Suisse.
+          </p>
+          <p className=' text-xl font-bold uppercase'>
+            #vidéo #réalisation #tournage #montage #instagram #vlog
+          </p>
         </div>
       </section>
     </div>

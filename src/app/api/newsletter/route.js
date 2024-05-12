@@ -3,24 +3,13 @@ import { render } from '@react-email/render';
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-import { siteConfig } from '@/constant/config';
-
-import EmailCustomer from '../../email/import';
-
+import NewsletterCustomer from '../../email/newsletter';
 const adminEmail = process.env.EMAIL;
 const adminPassword = process.env.EMAIL_PASSWORD;
 
 export async function POST(request) {
   const data = await request.formData();
-  const name = data.get('name');
   const email = data.get('email');
-  const phone = data.get('phone');
-  const message = data.get('message');
-  const service = data.get('service');
-
-  console.log('Name is', name);
-  console.log('Email is', email);
-  console.log('Phone is', phone);
 
   const transporter = nodemailer.createTransport({
     host: 'ssl0.ovh.net',
@@ -32,30 +21,19 @@ export async function POST(request) {
     },
   });
 
-  const emailHtml = render(
-    <EmailCustomer
-      url={siteConfig.url}
-      name={name}
-      phone={phone}
-      email={email}
-      service={service}
-      message={message}
-    />,
-    {
-      pretty: true,
-    }
-  );
-  console.log('Email HTML:', emailHtml);
+  const emailHtml = render(<NewsletterCustomer email={email} />, {
+    pretty: true,
+  });
 
   const admin = {
     from: `${adminEmail}`,
     to: `${adminEmail}`,
-    subject: `Nouveau message de ${name}`,
-    text: JSON.stringify(message),
+    subject: `Demande de newsletter pour ${email}`,
+    text: JSON.stringify(email),
     html: `
       <div className='justify-center max-w-[600px]'>
-        <span className='text-3xl font-bold'>Message :</span>
-        <div className='rounded-xl bg-slate-400 p-8'>${message}</div>
+        <span className='text-3xl font-bold'>Inscription newsletter demandée pour :</span>
+        <div className='rounded-xl bg-slate-400 p-8'>${email}</div>
       </div>
       `,
   };
@@ -63,8 +41,8 @@ export async function POST(request) {
   const customer = {
     from: `${adminEmail}`,
     to: `${email}`,
-    subject: `NBProduction - Votre demande de devis a bien été prise en compte`,
-    text: JSON.stringify(message),
+    subject: `NBProduction - Votre inscription à la newsletter est active !`,
+    text: JSON.stringify(email),
     html: emailHtml,
 
     // html: `

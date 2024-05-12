@@ -1,7 +1,6 @@
 export const siteConfig = {
   // Titre des pages :
-  title:
-    'Nicolas Blanc Production - Une vidéo professionnelle pour tous les besoins',
+  title: 'NBProduction - Une vidéo pour tous vos besoins',
   description:
     "Emmenez votre marque à l'étape supérieure grâce à une vidéo de qualité professionnelle !",
 

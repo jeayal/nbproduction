@@ -12,7 +12,7 @@ export default function TrustedLogos() {
         <p>{subTitle}</p>
       </div>
       <div className='flex justify-center'>
-        <ul className='inline-grid grid-cols-2 items-center justify-center gap-x-16 gap-y-6  md:grid-cols-3 md:gap-x-10 lg:grid-cols-4'>
+        <ul className='inline-grid grid-cols-2 items-center justify-center gap-x-6 gap-y-6  md:grid-cols-3 md:gap-x-10 lg:grid-cols-4'>
           <li>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -90,10 +90,10 @@ export default function TrustedLogos() {
 
           <li>
             <svg
-              width={250}
+              // width={250}
               xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 2783.67 316.8'
-              className='m-auto'
+              viewBox='0 0 2000 315'
+              className='w-32 md:w-64'
               fill='currentColor'
             >
               <path

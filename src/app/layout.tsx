@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import '@/styles/globals.css';
 
-import Footer from '@/app/components/footer';
+import Footer from '@/app/components/footer.jsx';
 import Provider from '@/app/components/provider';
 import NavBar from '@/app/navbar';
 import ScrollTheme from '@/app/scrollTheme';

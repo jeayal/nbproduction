@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-// Contact Component Web3Forms - Shortly Agency v1.2 2023
 'use client';
 
 import HCaptcha from '@hcaptcha/react-hcaptcha';
@@ -11,13 +10,9 @@ import styles from './contactForm.module.css';
 import { siteConfig } from '@/constant/config';
 
 export default function ContactGmail() {
-  // const customMail = 'contact@blanc-nicolas.com';
   const {
     register,
     handleSubmit,
-    // reset,
-    // watch,
-    // control,
     setValue,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
@@ -79,7 +74,7 @@ export default function ContactGmail() {
           type='text'
           placeholder='Votre nom'
           autoComplete='false'
-          className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-600  ${
+          className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-300  ${
             errors.name
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
@@ -101,7 +96,7 @@ export default function ContactGmail() {
           placeholder='Votre adresse email'
           name='email'
           autoComplete='false'
-          className={`border-1  mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-600  ${
+          className={`border-1  mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-300  ${
             errors.email
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
@@ -126,7 +121,7 @@ export default function ContactGmail() {
           name='phone'
           placeholder='Votre numéro de téléphone'
           autoComplete='false'
-          className={`border-1  mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-600  ${
+          className={`border-1  mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-neutral-900 dark:text-white   dark:placeholder:text-gray-300  ${
             errors.phone
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
@@ -151,7 +146,7 @@ export default function ContactGmail() {
           id='needChoice'
           aria-label='Sélectionnez votre besoin ou projet'
           placeholder='Quel est votre besoin ?'
-          className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none focus:ring-4 active:text-gray-800 dark:bg-neutral-900 dark:text-white dark:placeholder:text-gray-600  ${
+          className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 active:text-gray-800 dark:bg-neutral-900 dark:text-white dark:placeholder:text-gray-300  ${
             errors.message
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
@@ -184,7 +179,7 @@ export default function ContactGmail() {
         <textarea
           name='message'
           placeholder='Décrivez votre projet ou votre besoin'
-          className={`border-1 mt-2 h-36 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800   focus:ring-4 dark:bg-neutral-900  dark:text-white dark:placeholder:text-gray-600  ${
+          className={`border-1 mt-2 h-36 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800   focus:ring-4 dark:bg-neutral-900  dark:text-white dark:placeholder:text-gray-300  ${
             errors.message
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
