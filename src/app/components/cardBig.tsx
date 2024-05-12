@@ -32,7 +32,7 @@ export default function CardRowBig({
         } `}
       >
         <div className='relative flex flex-col justify-center gap-6 p-8 text-left md:w-full md:p-12'>
-          <h1 id='title' className='text-5xl'>
+          <h1 id='title' className='text-3xl md:text-5xl'>
             {title}
           </h1>
           <p id='text' className='text-balance'>
@@ -49,7 +49,11 @@ export default function CardRowBig({
           </div>
         </div>
 
-        <div className='flex size-full items-center justify-end'>
+        <div
+          className={`flex size-full items-center ${
+            rowInverse ? 'justify-end' : 'justify-start'
+          } `}
+        >
           {videoSrcMp4 || videoSrcWebm ? (
             <video
               loop

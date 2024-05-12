@@ -103,7 +103,12 @@ export default function LabTabs() {
 
         <TabPanel value='1' className={`${styles.slideIn}`}>
           <CardRowBig
-            title='Immortalisez votre mariage en haute-qualité'
+            title={
+              <>
+                Immortalisez votre mariage en{' '}
+                <span className='gradText'>haute-qualité</span> !
+              </>
+            }
             videoSrcMp4='/videos/mariage-nicolas-blanc-video.mp4'
             videoSrcWebm='/videos/mariage-nicolas-blanc-video.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
@@ -119,7 +124,11 @@ export default function LabTabs() {
         <TabPanel value='2' className={`${styles.slideIn}`}>
           <CardRowBig
             rowInverse
-            title='Un souvenir de votre évènement'
+            title={
+              <>
+                Un souvenir de votre <span className='gradText'>évènement</span>
+              </>
+            }
             videoSrcMp4='/videos/concerts.mp4'
             videoSrcWebm='/videos/concerts.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
@@ -134,7 +143,12 @@ export default function LabTabs() {
         <TabPanel value='3' className={`${styles.slideIn}`}>
           <CardRowBig
             rowInverse={false}
-            title='Une publicité pour votre produit phare'
+            title={
+              <>
+                Une publicité pour votre{' '}
+                <span className='gradText'>produit phare</span>
+              </>
+            }
             videoSrcMp4='/videos/publicite-nicolas-blanc-video.mp4'
             videoSrcWebm='/videos/publicite-nicolas-blanc-video.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
@@ -149,7 +163,12 @@ export default function LabTabs() {
         <TabPanel value='4' className={`${styles.slideIn}`}>
           <CardRowBig
             rowInverse
-            title='Une couverture de votre évènement sportif'
+            title={
+              <>
+                Une couverture de votre{' '}
+                <span className='gradText'>évènement sportif</span>
+              </>
+            }
             videoSrcMp4='/videos/sport-nicolas-blanc-video.mp4'
             videoSrcWebm='/videos/sport-nicolas-blanc-video.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'
@@ -165,7 +184,13 @@ export default function LabTabs() {
         <TabPanel value='5' className={`${styles.slideIn}`}>
           <CardRowBig
             rowInverse={false}
-            title='Une vidéo de qualité professionnelle pour votre entreprise'
+            title={
+              <>
+                Une vidéo de{' '}
+                <span className='gradText'>qualité professionnelle</span> pour
+                votre entreprise
+              </>
+            }
             videoSrcMp4='/videos/entreprise-nicolas-blanc-video.mp4'
             videoSrcWebm='/videos/entreprise-nicolas-blanc-video.webm'
             imgAlt='NBProductions, votre vidéaste professionnel à portée de clic.'

@@ -20,7 +20,7 @@ export default function ContactGmail() {
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
-  const [isHuman, setIsHuman] = useState(true); // To enable HCaptcha set to false
+  const [isHuman, setIsHuman] = useState(false); // To enable HCaptcha set to false
 
   const onHCaptchaChange = (token) => {
     setValue('h-captcha-response', token);
@@ -242,7 +242,10 @@ export default function ContactGmail() {
         </div>
         <div className='my-4'>
           {!isHuman && (
-            <div className='mt-6 flex justify-center'>
+            <div className='mt-2 flex flex-col items-center justify-center gap-4 '>
+              <p className='text-sm text-neutral-400'>
+                Veuillez d'abord valider le captcha :
+              </p>
               <HCaptcha
                 sitekey='50b2fe65-b00b-4b9e-ad62-3ba471098be2'
                 onVerify={onHCaptchaChange}

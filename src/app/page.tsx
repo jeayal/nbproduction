@@ -19,12 +19,12 @@ export default function HomePage() {
     <div>
       <header className='relative flex h-screen items-center overflow-hidden'>
         <div data-aos='fade-up' className='layout z-20 flex  flex-col gap-4 '>
-          <h1 className='mb-4 text-balance text-5xl text-white lg:text-[4.5dvw] lg:leading-none'>
+          <h1 className='text-balance text-5xl text-white drop-shadow-xl md:mb-4 lg:text-[4.5dvw] lg:leading-none'>
             Une
             <span className='gradText'>&nbsp;vidéo&nbsp;</span>
             pour sublimer votre image de marque.
           </h1>
-          <p className='text-xl text-white  lg:text-[1dvw] lg:leading-[1.3dvw]'>
+          <p className='text-xl text-white  drop-shadow-lg lg:text-[1dvw] lg:leading-[1.3dvw]'>
             La vidéo est l’un des moyens les plus efficaces pour communiquer.
             <br />
             N’attendez plus pour briller sur les réseaux sociaux !
@@ -36,7 +36,7 @@ export default function HomePage() {
           autoPlay
           playsInline
           webkit-playsinline='true'
-          className='absolute z-10 min-h-full w-auto min-w-full max-w-none'
+          className='absolute z-10 min-h-full w-auto min-w-full max-w-none opacity-75'
         >
           <source
             src='/videos/header-nicolas-blanc-production-video.webm'
