@@ -10,7 +10,7 @@ import Socials from '@/app/components/socials';
 import Testimonials from '@/app/components/testimonials';
 import TrustedLogos from '@/app/components/trustedBy';
 import VideoCard from '@/app/components/videoCardv3';
-import Contact from '@/app/contactComponent';
+import ContactGmail from '@/app/contactComponent_v2';
 
 import LabTabs from './components/tabs';
 
@@ -52,7 +52,7 @@ export default function HomePage() {
       <section className='my-10 md:my-24'>
         <div
           id='join-the-club'
-          className=' flex w-full flex-col items-center justify-center text-center align-middle  '
+          className='flex w-full scroll-mt-[150px] flex-col items-center justify-center text-center align-middle  '
         >
           <h1 className='text-center text-4xl  md:text-6xl'>
             Rejoignez le <span className='gradText'>club.</span>
@@ -177,7 +177,7 @@ export default function HomePage() {
 
       <section
         id='portfolio'
-        className='layout relative my-24 flex flex-col items-center justify-center gap-10 align-middle'
+        className='layout relative my-24 flex scroll-mt-[150px] flex-col items-center justify-center gap-10 align-middle'
       >
         <h1 className=' text-center  text-4xl md:text-6xl'>
           Mes dernières <span className='gradText'>vidéos.</span>
@@ -250,7 +250,7 @@ export default function HomePage() {
 
       <section
         id='contact'
-        className=' m-auto my-10 flex flex-col justify-center gap-10 md:my-36 md:w-[70vw] md:flex-row md:gap-20 '
+        className='  m-auto my-10 flex scroll-mt-[150px] flex-col justify-center gap-10 md:my-36 md:w-[70vw] md:flex-row md:gap-20 '
       >
         <div className=' layout m-auto flex h-1/2  w-auto flex-col items-start justify-center rounded-xl p-12 md:border-[1px] md:border-gray-400 md:bg-white/20 md:backdrop-blur-sm  md:dark:border-gray-500 md:dark:bg-black/20'>
           <h1 className='items-start text-5xl  md:text-[4dvw]'>
@@ -267,7 +267,7 @@ export default function HomePage() {
           data-aos='fade-up'
           className='layout mb-10 flex drop-shadow-xl md:w-full'
         >
-          <Contact />
+          <ContactGmail />
         </div>
         <div className='absolute -z-[10] -mt-16  hidden w-auto md:flex'>
           <Image

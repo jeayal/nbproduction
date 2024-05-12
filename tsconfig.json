@@ -42,7 +42,8 @@
     "src/app/components/navbar.tsx.old",
     "src/app/components/mainNavigation.tsx.old",
     "src/app/components/provider.tsx",
-    "src/app/contactComponent.tss"
+    "src/app/contactComponent.tss",
+    "src/app/api/email/route.js"
   ],
   "exclude": ["node_modules"],
   "moduleResolution": ["node_modules", ".next", "node"]
