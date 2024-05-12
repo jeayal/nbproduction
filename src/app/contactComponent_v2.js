@@ -69,7 +69,6 @@ export default function ContactGmail() {
           {...register('botcheck')}
         ></input>
         <h1 className='mb-4 text-4xl'>Demande de devis</h1>
-
         <input
           type='text'
           placeholder='Votre nom'
@@ -89,7 +88,6 @@ export default function ContactGmail() {
             <small>{errors.name.message}</small>
           </div>
         )}
-
         <input
           id='email_address'
           type='email'
@@ -117,7 +115,6 @@ export default function ContactGmail() {
         )}
         <input
           id='phone'
-          type='phone'
           name='phone'
           placeholder='Votre numéro de téléphone'
           autoComplete='false'
@@ -135,6 +132,7 @@ export default function ContactGmail() {
             },
           })}
         />
+
         {errors.phone && (
           <div className='mt-1 text-red-600'>
             <small>{errors.phone.message}</small>
@@ -142,12 +140,12 @@ export default function ContactGmail() {
         )}
 
         <select
-          name='BesoinChoix'
-          id='needChoice'
+          name='service'
+          id='service'
           aria-label='Sélectionnez votre besoin ou projet'
           placeholder='Quel est votre besoin ?'
           className={`border-1 mt-2 w-full rounded-md px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 active:text-gray-800 dark:bg-neutral-900 dark:text-white dark:placeholder:text-gray-300  ${
-            errors.message
+            errors.service
               ? 'border-red-600 ring-red-100 focus:border-red-600 dark:ring-0'
               : 'border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white'
           }`}
@@ -175,7 +173,6 @@ export default function ContactGmail() {
           </option>
           <option value='Autre'>Autre</option>
         </select>
-
         <textarea
           name='message'
           placeholder='Décrivez votre projet ou votre besoin'
