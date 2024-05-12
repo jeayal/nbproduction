@@ -2,7 +2,9 @@ import Image from 'next/image';
 import * as React from 'react';
 
 import Button from '@/app/components/button';
-import CardService from '@/app/components/card';
+import CardMontage from '@/app/components/card_montage';
+import CardReal from '@/app/components/card_real';
+import CardTournage from '@/app/components/card_tournage';
 import CardRowBig from '@/app/components/cardBig';
 import Socials from '@/app/components/socials';
 import Testimonials from '@/app/components/testimonials';
@@ -137,32 +139,35 @@ export default function HomePage() {
               </h1>
               <div className='flex flex-col gap-6 md:flex-row'>
                 <div data-aos='fade-up'>
-                  <CardService
+                  {/* <CardService
                     title='Tournage'
                     txt="Réalisez une expérience visuelle extraordinaire avec mes services de tournage. Doté d'une vision
                     artistique distinctive, je capture et magnifie chaque instant, partout dans le monde. Transformez vos
                     idées en une réalité visuelle mémorable."
                     url='/#contact'
-                  />
+                  /> */}
+                  <CardTournage url='/#contact' />
                 </div>
                 <div data-aos='fade-up' data-aos-delay='50'>
-                  <CardService
+                  {/* <CardService
                     title='Montage'
                     txt='Transformez vos moments en souvenirs inoubliables avec mes services de montage vidéo. Expert en
                     post-production, je sublime chaque séquence, ajoutant une touche artistique pour créer des vidéos
                     exceptionnelles et personnalisées.'
                     url='/#contact'
-                  />
+                  /> */}
+                  <CardMontage url='/#contact' />
                 </div>
 
                 <div data-aos='fade-up' data-aos-delay='100'>
-                  <CardService
+                  {/* <CardService
                     title='Réalisation'
                     txt="Concrétisez votre vision avec mes services de réalisation. Du concept à l'écran, je donne vie à vos idées,
                     apportant créativité et expertise. Chaque projet devient une expérience visuelle immersive et
                     mémorable."
                     url='/#contact'
-                  />
+                  /> */}
+                  <CardReal url='/#contact' />
                 </div>
               </div>
             </div>
@@ -237,7 +242,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className='my-16'>
+      <section className='flex min-h-[75dvh] flex-col items-center justify-center'>
         <Testimonials />
       </section>
 
