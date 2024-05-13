@@ -5,7 +5,7 @@ export const siteConfig = {
     "Emmenez votre marque à l'étape supérieure grâce à une vidéo de qualité professionnelle !",
 
   // URL finale pour lien accueil / logo etc :
-  url: 'https://nbproduction.vercel.app',
+  url: process.env.BASE_URL || 'http://localhost:3000',
 
   // Services proposés (apparait dans menu NavBar, ContactForm needChoice, Tabs en HomePage) :
   services: ['Mariage', 'Concerts', 'Publicité', 'Sport', 'Entreprise'],

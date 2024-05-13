@@ -19,7 +19,7 @@ const baseUrl = process.env.BASE_URL;
 const pathname = new URL(baseUrl).pathname;
 const adress = process.env.ADRESS;
 
-export const NewsletterCustomer = () => {
+export const EmailAdmin = ({ name, phone, message, service, email }) => {
   const sendDate = new Date();
   const formattedDate = new Intl.DateTimeFormat('fr', {
     dateStyle: 'long',
@@ -29,7 +29,7 @@ export const NewsletterCustomer = () => {
   return (
     <Html>
       <Head />
-      <Preview>Votre inscription à ma Newsletter est active ! 🎉</Preview>
+      <Preview>Votre demande de devis est prise en compte !</Preview>
       <Body style={main}>
         <Container>
           <Section style={logo}>
@@ -51,6 +51,15 @@ export const NewsletterCustomer = () => {
             <Row style={{ ...boxInfos, paddingBottom: '0' }}>
               <Column>
                 <Heading
+                  style={{
+                    fontSize: 32,
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}
+                >
+                  Bonjour Nicolas,
+                </Heading>
+                <Heading
                   as='h2'
                   style={{
                     fontSize: 26,
@@ -59,27 +68,44 @@ export const NewsletterCustomer = () => {
                     textWrap: 'balance',
                   }}
                 >
-                  Votre inscription pour la newsletter NBProduction a bien été
-                  enregistrée ! 🎉
+                  Vous avez reçu une nouvelle demande de devis ! 🎉
                 </Heading>
                 <Hr />
-                <Text style={paragraph}>
-                  Je vous remercie de l'intérêt que vous portez à mes services
-                  de production vidéo. <br />
-                  C'est un réel plaisir de vous compter parmi mes abonnés !
+                <Text style={{ ...paragraph, textAlign: 'center' }}>
+                  <b>Voici les détails de la demande :</b>
                 </Text>
-                <Hr />
-                <Text style={paragraph}>
-                  Vous recevrez périodiquement des contenus exclusifs, des
-                  offres promotionnelles et des informations sur les dernières
-                  tendances en matière de production vidéo.
-                </Text>
+                <Container style={{ ...details, textAlign: 'left' }}>
+                  <Text style={paragraph}>
+                    <b>Nom du client : </b>
+                    {name}
+                  </Text>
+                  <Text style={{ ...paragraph, marginTop: -5 }}>
+                    <b>Numéro de téléphone : </b>
+                    {phone}
+                  </Text>
+                  <Text style={{ ...paragraph, marginTop: -5 }}>
+                    <b>Email du client :</b> {email}
+                  </Text>
+                  <Text style={{ ...paragraph, marginTop: -5 }}>
+                    <b>Service demandé :</b> {service}
+                  </Text>
+                  <Text style={{ ...paragraph, marginTop: -5 }}>
+                    <b>La demande : </b>
+                    {message}
+                  </Text>
+                </Container>
               </Column>
             </Row>
-            <Row style={{ ...boxInfos, paddingTop: '0', textAlign: 'center' }}>
-              <Column style={containerButton} colSpan={2}>
-                <Button href={baseUrl} style={button}>
-                  Découvrir mes services
+            <Hr />
+            <Row style={{ ...boxInfos, paddingTop: '10', textAlign: 'center' }}>
+              <Column style={containerButton}>
+                <Button href={`mailto:${email}`} style={button}>
+                  Répondre par mail
+                </Button>
+              </Column>
+              <Column style={{ ...containerButton, marginTop: 5 }}>
+                <Button href={`tel:${phone}`} style={button}>
+                  Appeler le client
                 </Button>
               </Column>
             </Row>
@@ -105,7 +131,7 @@ export const NewsletterCustomer = () => {
   );
 };
 
-export default NewsletterCustomer;
+export default EmailAdmin;
 
 const main = {
   backgroundColor: '#fff',
@@ -113,9 +139,18 @@ const main = {
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 };
 
+const details = {
+  border: '1px solid rgb(190,190,190, 0.7)',
+  borderRadius: '10px',
+  backgroundColor: 'rgb(190,190,190, 0.25)',
+  padding: '20px',
+  marginTop: '15px',
+  marginBottom: '15px',
+};
+
 const paragraph = {
   fontSize: 16,
-  textAlign: 'center',
+  // textAlign: 'center',
   textWrap: 'pretty',
 };
 
@@ -128,6 +163,7 @@ const containerButton = {
   display: 'flex',
   justifyContent: 'center',
   width: '100%',
+  margin: 'auto',
 };
 
 const button = {

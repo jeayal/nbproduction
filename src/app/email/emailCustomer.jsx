@@ -5,6 +5,7 @@ import {
   Container,
   Head,
   Heading,
+  Hr,
   Html,
   Img,
   Preview,
@@ -14,9 +15,9 @@ import {
 } from '@react-email/components';
 import * as React from 'react';
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : 'http://nbproduction.vercel.app';
+const baseUrl = process.env.BASE_URL;
+const pathname = new URL(baseUrl).pathname;
+const adress = process.env.ADRESS;
 
 export const EmailCustomer = ({ name, phone, message, service }) => {
   const sendDate = new Date();
@@ -64,37 +65,49 @@ export const EmailCustomer = ({ name, phone, message, service }) => {
                     fontSize: 26,
                     fontWeight: 'bold',
                     textAlign: 'center',
+                    textWrap: 'balance',
                   }}
                 >
                   Votre demande de devis a bien été reçue ! 🎉
                 </Heading>
-
-                <Text style={paragraph}>
-                  <b>Votre nom : </b>
-                  {name}
-                </Text>
-                <Text style={{ ...paragraph, marginTop: -5 }}>
-                  <b>Votre numéro de téléphone : </b>
-                  {phone}
-                </Text>
-                <Text style={{ ...paragraph, marginTop: -5 }}>
-                  <b>Service demandé :</b> {service}
-                </Text>
-                <Text style={{ ...paragraph, marginTop: -5 }}>
-                  <b>Votre message : </b>
-                  {message}
-                </Text>
-
+                <Hr />
+                <Container style={{ ...details, textAlign: 'left' }}>
+                  <Text style={paragraph}>
+                    <b>Votre nom : </b>
+                    {name}
+                  </Text>
+                  <Text style={{ ...paragraph, marginTop: -5 }}>
+                    <b>Votre numéro de téléphone : </b>
+                    {phone}
+                  </Text>
+                  <Text style={{ ...paragraph, marginTop: -5 }}>
+                    <b>Service demandé :</b> {service}
+                  </Text>
+                  <Text style={{ ...paragraph, marginTop: -5 }}>
+                    <b>Votre message : </b>
+                    {message}
+                  </Text>
+                </Container>
+                <Hr />
                 <Text style={paragraph}>
                   J'ai bien reçu votre demande de devis. Je vous recontacterai
                   dans les plus brefs délais. <br />
+                </Text>
+                <Text
+                  style={{
+                    ...paragraph,
+                    fontSize: 12,
+                    color: 'rgb(0,0,0, 0.7)',
+                  }}
+                >
                   Ceci est un message automatique. Merci de ne pas y répondre.
                 </Text>
+                <Hr />
               </Column>
             </Row>
             <Row style={{ ...boxInfos, paddingTop: '0', textAlign: 'center' }}>
-              <Column style={containerButton} colSpan={2}>
-                <Button href='http://nbproductions.vercel.app' style={button}>
+              <Column style={containerButton}>
+                <Button href={baseUrl} style={button}>
                   Découvrir mes services
                 </Button>
               </Column>
@@ -113,8 +126,7 @@ export const EmailCustomer = ({ name, phone, message, service }) => {
               color: 'rgb(0,0,0, 0.7)',
             }}
           >
-            © 2024 | NBProduction, 10 Rue Masséna, Nice, BP 06000, France |
-            www.nbproduction.com
+            © 2024 | NBProduction, {adress} | {pathname}
           </Text>
         </Container>
       </Body>
@@ -130,10 +142,19 @@ const main = {
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 };
 
+const details = {
+  border: '1px solid rgb(190,190,190, 0.7)',
+  borderRadius: '10px',
+  backgroundColor: 'rgb(190,190,190, 0.25)',
+  padding: '20px',
+  marginTop: '15px',
+  marginBottom: '15px',
+};
+
 const paragraph = {
   fontSize: 16,
-  textAlign: 'center',
-  textBalance: 'pretty',
+  // textAlign: 'center',
+  textWrap: 'pretty',
 };
 
 const logo = {

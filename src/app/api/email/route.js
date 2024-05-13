@@ -5,7 +5,8 @@ import nodemailer from 'nodemailer';
 
 import { siteConfig } from '@/constant/config';
 
-import EmailCustomer from '../../email/import';
+import EmailAdmin from '../../email/emailAdmin';
+import EmailCustomer from '../../email/emailCustomer';
 
 const adminEmail = process.env.EMAIL;
 const adminPassword = process.env.EMAIL_PASSWORD;
@@ -45,19 +46,33 @@ export async function POST(request) {
       pretty: true,
     }
   );
-  console.log('Email HTML:', emailHtml);
+
+  const emailAdmin = render(
+    <EmailAdmin
+      url={siteConfig.url}
+      name={name}
+      phone={phone}
+      email={email}
+      service={service}
+      message={message}
+    />,
+    {
+      pretty: true,
+    }
+  );
 
   const admin = {
     from: `${adminEmail}`,
     to: `${adminEmail}`,
-    subject: `Nouveau message de ${name}`,
+    subject: `Nouvelle demande de devis de ${name}`,
     text: JSON.stringify(message),
-    html: `
-      <div className='justify-center max-w-[600px]'>
-        <span className='text-3xl font-bold'>Message :</span>
-        <div className='rounded-xl bg-slate-400 p-8'>${message}</div>
-      </div>
-      `,
+    html: emailAdmin,
+    // `
+    //   <div className='justify-center max-w-[600px]'>
+    //     <span className='text-3xl font-bold'>Message :</span>
+    //     <div className='rounded-xl bg-slate-400 p-8'>${message}</div>
+    //   </div>
+    //   `,
   };
 
   const customer = {
