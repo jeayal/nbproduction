@@ -6,6 +6,7 @@ import nodemailer from 'nodemailer';
 import NewsletterCustomer from '../../email/newsletter';
 const adminEmail = process.env.EMAIL;
 const adminPassword = process.env.EMAIL_PASSWORD;
+const adminEmailReceiver = process.env.ADMIN_EMAIL;
 
 export async function POST(request) {
   const data = await request.formData();
@@ -27,7 +28,7 @@ export async function POST(request) {
 
   const admin = {
     from: `${adminEmail}`,
-    to: `${adminEmail}`,
+    to: `${adminEmailReceiver}`,
     subject: `Demande de newsletter pour ${email}`,
     text: JSON.stringify(email),
     html: `

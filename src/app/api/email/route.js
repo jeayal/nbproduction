@@ -10,6 +10,7 @@ import EmailCustomer from '../../email/emailCustomer';
 
 const adminEmail = process.env.EMAIL;
 const adminPassword = process.env.EMAIL_PASSWORD;
+const adminEmailReceiver = process.env.ADMIN_EMAIL;
 
 export async function POST(request) {
   const data = await request.formData();
@@ -19,9 +20,9 @@ export async function POST(request) {
   const message = data.get('message');
   const service = data.get('service');
 
-  console.log('Name is', name);
-  console.log('Email is', email);
-  console.log('Phone is', phone);
+  // console.log('Name is', name);
+  // console.log('Email is', email);
+  // console.log('Phone is', phone);
 
   const transporter = nodemailer.createTransport({
     host: 'ssl0.ovh.net',
@@ -63,7 +64,7 @@ export async function POST(request) {
 
   const admin = {
     from: `${adminEmail}`,
-    to: `${adminEmail}`,
+    to: `${adminEmailReceiver}`,
     subject: `Nouvelle demande de devis de ${name}`,
     text: JSON.stringify(message),
     html: emailAdmin,
